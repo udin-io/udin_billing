@@ -1,0 +1,294 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "A refund can't be undone. Check the transaction twice, and never refund the payment that bought the plan, or the user loses what they paid for."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "All payments"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Amount"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Amount: what was really paid. It can differ from the plan's price."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Couldn't load payments: %{reason}"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Find the payment in the table and copy its transaction."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: a checkout for %{price} %{currency} was cancelled after an hour, then the user paid anyway. Nothing was given. Refund that payment."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: order %{order} was paid by transactions %{first} and %{second}. The plan came from %{first}. Refund %{second} only, and the user keeps the plan."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "How to refund"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Money arrived but nothing was given. You need to refund it."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Money that users paid for one-time plans. Payments that need a refund come first, so you can return that money in the payment provider's dashboard."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Needs refund"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Needs refund shows only the payments waiting for you. All payments shows every one-time payment, newest first."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "No payments yet."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Nothing to refund."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Open the payment provider's dashboard and refund that transaction there."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paid"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paid after the checkout was cancelled"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paid after the checkout was cancelled."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paid after the checkout was cancelled: %{detail}"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paid twice for the same order"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paid twice for the same order. Refund this second payment."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paid, and the plan was given."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paid: when the money arrived."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Payments shown"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Payments that need a refund"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Plan"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Provider order"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Provider order: the checkout at the payment provider. Two payments for one order share it."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Refund reason: %{reason}"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Refunded by %{provider}"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Showing the newest %{count} payment."
+msgid_plural "Showing the newest %{count} payments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Status"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "The checkout was closed before any money arrived."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "The money was returned to the user."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "The payment did not go through."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "The payment that bought the plan"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "The user paid after the checkout had already been cancelled or closed, so the money could not be used to buy the plan."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "The user started the checkout but has not paid yet."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "The user was charged two times for one checkout, for example a double tap on Pay or paying by card and then by wallet. The first payment bought the plan and the second one waits here."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "These payments reached us but bought nothing, so the user was charged for nothing."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Transaction"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Transaction: the id of this one payment at the provider. Use it to find the payment when you refund."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "User"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "User: the buyer's id. Click it to open their account."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "What do the columns and statuses mean?"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "When the provider reports the refund, the row turns refunded by itself. You do not need to change anything here."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Why"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Why: the reason this payment needs your attention."
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "cancelled"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "failed"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "needs refund"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "none"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "paid"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "pending"
+msgstr ""
+
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "refunded"
+msgstr ""

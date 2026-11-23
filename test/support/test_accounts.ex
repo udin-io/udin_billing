@@ -30,4 +30,15 @@ defmodule UdinBilling.Test.User do
   @spec admin?(term()) :: boolean()
   def admin?(%{admin: true}), do: true
   def admin?(_), do: false
+
+  @doc """
+  The admin's language for tests, wired through `config :udin_billing, :admin_locale` in
+  the tests that need it: an email ending `@ar.example.com` means Arabic.
+  """
+  @spec locale(term()) :: String.t() | nil
+  def locale(%{email: email}) when is_binary(email) do
+    if String.ends_with?(email, "@ar.example.com"), do: "ar"
+  end
+
+  def locale(_actor), do: nil
 end

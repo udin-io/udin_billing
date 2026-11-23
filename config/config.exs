@@ -51,6 +51,16 @@ config :udin_billing, UdinBilling.TestRepo,
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
 
+# The dashboard's test host (test/support/web.ex).
+config :udin_billing, UdinBilling.Test.Web.Endpoint,
+  url: [host: "localhost"],
+  secret_key_base: String.duplicate("udin-billing-test-secret-", 4),
+  live_view: [signing_salt: "udin-billing-lv"],
+  render_errors: [formats: [html: UdinBilling.Test.Web.ErrorHTML]],
+  server: false
+
+config :phoenix, :json_library, Jason
+
 config :ash, :disable_async?, true
 
 # Required from Ash 3.3x on (each app sets it too); older Ash ignores it.

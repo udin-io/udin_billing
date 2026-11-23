@@ -24,6 +24,12 @@ defmodule UdinBilling.Config do
       `true` (default) keeps the plan's switches on; `false` ends access at the paid
       period's end until the payment succeeds. Counters never get a new, unpaid cycle.
       Read on every access check, so a change applies at once.
+    * `:admin_locale` - `{module, function}` called with the signed-in admin; returns their
+      language (`"ar"`) or nil. The dashboard shows in it. Without it, the admin's own
+      `locale` field is used when it has one. A language not in `:locales` is ignored.
+    * `:dashboard_examples` - a map that replaces any example the dashboard's help texts
+      show (`:feature`, `:feature_key`, `:plan_name`, `:plan_code`, `:price`, `:amount`,
+      `:currency`). They come from the project's own catalog unless set here.
     * `:locales` - languages of plan and feature texts, default locale first, e.g.
       `["en", "ar"]` (default `["en"]`). The default locale's text is required.
     * `:allow_sandbox` - accept store sandbox/test purchases (default `false`; set `true`
@@ -201,6 +207,22 @@ defmodule UdinBilling.Config do
       {module, function} -> apply(module, function, [actor]) == true
       nil -> false
     end
+  end
+
+  @doc """
+  The language the dashboard shows in for `actor`: the app's `:admin_locale` hook, or the
+  actor's own `locale` field. Nil when there is none or the app doesn't offer it.
+  """
+  @spec admin_locale(term()) :: String.t() | nil
+  def admin_locale(actor) do
+    raw =
+      case get(:admin_locale, nil) do
+        {module, function} -> apply(module, function, [actor])
+        nil -> if is_map(actor), do: Map.get(actor, :locale)
+      end
+
+    locale = if raw, do: to_string(raw)
+    if locale in locales(), do: locale
   end
 
   defp get(key, default), do: Application.get_env(:udin_billing, key, default)

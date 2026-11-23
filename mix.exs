@@ -12,7 +12,9 @@ defmodule UdinBilling.MixProject do
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
-      consolidate_protocols: Mix.env() != :test
+      consolidate_protocols: Mix.env() != :test,
+      # Keeps the .po files free of line numbers, so moving code doesn't churn them.
+      gettext: [write_reference_line_numbers: false]
     ]
   end
 
@@ -25,6 +27,7 @@ defmodule UdinBilling.MixProject do
 
   defp deps do
     [
+      {:gettext, "~> 1.0"},
       {:ash, "~> 3.12"},
       {:ash_postgres, "~> 2.6"},
       {:jason, "~> 1.4"},
