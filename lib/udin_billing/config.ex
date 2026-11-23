@@ -30,6 +30,17 @@ defmodule UdinBilling.Config do
     * `:dashboard_examples` - a map that replaces any example the dashboard's help texts
       show (`:feature`, `:feature_key`, `:plan_name`, `:plan_code`, `:price`, `:amount`,
       `:currency`). They come from the project's own catalog unless set here.
+    * `:dashboard_theme` - `:system` (default) follows the operating system's light or dark
+      setting, `:light` or `:dark` pins the dashboard to one, so it matches the host app's
+      own pages (Family-Corp's admin is always light).
+    * `:user_search` - `{module, function}` the dashboard's Users page calls with what the
+      admin typed (anything that isn't a user id). It returns up to 10 matches as
+      `[%{id: user_id, label: "Ahmed · +201001234567"}]`. The app decides which fields to
+      search and how to normalize them (phone formats, case). Without it, only ids work.
+    * `:user_labels` - `{module, function}` called once per dashboard page with the user ids
+      it shows; returns `%{user_id => "+201001234567 · Ahmed"}`. Payments shows the label
+      in place of the id, and the Users page shows it above the found user. Without it, ids
+      are shown.
     * `:locales` - languages of plan and feature texts, default locale first, e.g.
       `["en", "ar"]` (default `["en"]`). The default locale's text is required.
     * `:allow_sandbox` - accept store sandbox/test purchases (default `false`; set `true`
@@ -225,6 +236,27 @@ defmodule UdinBilling.Config do
     if locale in locales(), do: locale
   end
 
+  @doc """
+  The dashboard's colour theme: `:system` (default), `:light` or `:dark`. Raises on any
+  other value.
+  """
+  @spec dashboard_theme() :: :system | :light | :dark
+  def dashboard_theme, do: one_of!(:dashboard_theme, :system, [:system, :light, :dark])
+
+  @doc """
+  The app's user search for the dashboard (`{module, function}`), or nil when the app has
+  none. Raises on any other value.
+  """
+  @spec user_search() :: {module(), atom()} | nil
+  def user_search, do: hook!(:user_search)
+
+  @doc """
+  The app's user labels for the dashboard (`{module, function}`), or nil when the app has
+  none. Raises on any other value.
+  """
+  @spec user_labels() :: {module(), atom()} | nil
+  def user_labels, do: hook!(:user_labels)
+
   defp get(key, default), do: Application.get_env(:udin_billing, key, default)
 
   defp one_of!(key, default, allowed) do
@@ -234,6 +266,14 @@ defmodule UdinBilling.Config do
 
       value ->
         invalid!(key, value, inspect(allowed))
+    end
+  end
+
+  defp hook!(key) do
+    case get(key, nil) do
+      nil -> nil
+      {module, function} = hook when is_atom(module) and is_atom(function) -> hook
+      value -> invalid!(key, value, "{module, function} or nil")
     end
   end
 

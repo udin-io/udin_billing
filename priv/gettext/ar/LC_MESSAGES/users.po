@@ -225,3 +225,23 @@ msgstr "اكتب سبب منح هذه الباقة."
 #, elixir-autogen, elixir-format
 msgid "You don't have access."
 msgstr "ليس لديك صلاحية الوصول."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Find a user"
+msgstr "ابحث عن مستخدم"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "No user found for %{query}."
+msgstr "لا يوجد مستخدم يطابق %{query}."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paste the user's id, or type what your app lets you search by, such as a phone number or an email. Spaces around it are ignored."
+msgstr "الصق معرّف المستخدم، أو اكتب ما يتيح تطبيقك البحث به، مثل رقم الهاتف أو البريد الإلكتروني. المسافات حوله تُهمل."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Several users match. Choose one."
+msgstr "يطابق البحث أكثر من مستخدم. اختر واحدًا."

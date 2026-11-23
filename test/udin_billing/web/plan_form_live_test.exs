@@ -429,4 +429,20 @@ defmodule UdinBilling.Web.PlanFormLiveTest do
       end
     end
   end
+
+  test "the editor asks for product ids only of store providers, never Paymob's", %{conn: conn} do
+    {:ok, view, _html} = live(conn, "/admin/billing/plans/new")
+
+    assert has_element?(view, "#plan-product-revenuecat")
+    refute has_element?(view, "#plan-product-paymob")
+  end
+
+  test "with only Paymob configured, the provider products section is gone", %{conn: conn} do
+    paymob = Application.get_env(:udin_billing, :providers) |> Map.take(["paymob"])
+
+    with_env(:providers, paymob, fn ->
+      {:ok, _view, html} = live(conn, "/admin/billing/plans/new")
+      refute html =~ "Payment provider products"
+    end)
+  end
 end

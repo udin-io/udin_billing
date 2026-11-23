@@ -148,6 +148,7 @@ if Code.ensure_loaded?(Phoenix.LiveView) do
               <.payment_row
                 :for={payment <- @payments}
                 payment={payment}
+                user_label={@user_labels[payment.user_id]}
                 base={@ub_base}
                 lang={@ub_lang}
               />
@@ -185,6 +186,7 @@ if Code.ensure_loaded?(Phoenix.LiveView) do
     end
 
     attr :payment, :map, required: true
+    attr :user_label, :string, default: nil, doc: "The app's label for the user, else the id"
     attr :base, :string, required: true
     attr :lang, :string, required: true
 
@@ -192,9 +194,9 @@ if Code.ensure_loaded?(Phoenix.LiveView) do
       ~H"""
       <tr id={"payment-#{@payment.id}"}>
         <td class="ub-small" dir="ltr">{date(@payment.paid_at || @payment.inserted_at)}</td>
-        <td class="ub-mono ub-small" dir="ltr">
+        <td class={["ub-small", !@user_label && "ub-mono"]} dir="ltr">
           <.link navigate={href(@lang, @base, "/users?user_id=#{@payment.user_id}")}>
-            {@payment.user_id}
+            {@user_label || @payment.user_id}
           </.link>
         </td>
         <td>{Plan.localized(@payment.plan, :name, @lang)}</td>
@@ -311,11 +313,15 @@ if Code.ensure_loaded?(Phoenix.LiveView) do
 
       case Admin.list_purchases(socket.assigns.ub_actor, filters, opts) do
         {:ok, %{results: payments}} ->
-          assign(socket, payments: payments, page_size: @page_size)
+          # One call to the app for every user on the page, not one per row.
+          {:ok, labels} =
+            Admin.user_labels(Enum.map(payments, & &1.user_id), socket.assigns.ub_actor)
+
+          assign(socket, payments: payments, user_labels: labels, page_size: @page_size)
 
         {:error, error} ->
           socket
-          |> assign(payments: [], page_size: @page_size)
+          |> assign(payments: [], user_labels: %{}, page_size: @page_size)
           |> put_flash(
             :error,
             dgettext("payments", "Couldn't load payments: %{reason}",

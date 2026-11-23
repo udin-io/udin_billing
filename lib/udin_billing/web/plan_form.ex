@@ -75,10 +75,23 @@ defmodule UdinBilling.Web.PlanForm do
   @spec currency_options() :: [{String.t(), String.t()}]
   def currency_options, do: Enum.map(Config.currencies(), &{&1, &1})
 
-  @doc "Provider names configured in this app (for product id fields)."
+  @doc """
+  The configured providers whose plans need product ids, for the editor's product id
+  fields: only stores that report purchases by product id (they implement
+  `fetch_customer/2`, e.g. RevenueCat). A checkout provider like Paymob sells the plan
+  through a checkout made for that exact purchase, so it never reads product ids and
+  gets no field. Ids a plan already has for other providers are kept on save
+  (`keep_hidden/2`).
+  """
   @spec providers() :: [String.t()]
   def providers do
-    :udin_billing |> Application.get_env(:providers, %{}) |> Map.keys() |> Enum.sort()
+    :udin_billing
+    |> Application.get_env(:providers, %{})
+    |> Enum.filter(fn {_name, {module, _opts}} ->
+      UdinBilling.Provider.implements?(module, :fetch_customer, 2)
+    end)
+    |> Enum.map(fn {name, _config} -> name end)
+    |> Enum.sort()
   end
 
   @doc "Form params for `plan` (nil for a new plan), with a value for every catalog feature."
@@ -205,8 +218,8 @@ defmodule UdinBilling.Web.PlanForm do
   @doc """
   `attrs` from the form, plus what the form doesn't show of `plan`, so saving never wipes
   it: metadata other than the badge (e.g. set by a catalog import or by code), and the
-  product ids of providers not configured in this environment (a store configured only in
-  production keeps its ids when the plan is edited on staging).
+  product ids of providers without a field (a store configured only in production keeps
+  its ids when the plan is edited on staging, see `providers/0`).
   """
   @spec keep_hidden(map(), struct()) :: map()
   def keep_hidden(attrs, plan) do

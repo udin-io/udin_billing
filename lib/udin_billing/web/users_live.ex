@@ -4,7 +4,9 @@ if Code.ensure_loaded?(Phoenix.LiveView) do
     One user's billing, for support: what they have now and a way to give them a plan.
 
     ## What an admin can do here
-      * Look up a user by id (`?user_id=...`, so a support link can open it directly).
+      * Look up a user by id (`?user_id=...`, so a support link can open it directly), or,
+        when the app sets `:user_search`, by anything that app supports, such as a phone
+        number (`?q=...`). One match opens the user, several are listed to choose from.
       * See each counter's balance and when it resets, the switches that are on, and the
         plans and purchases granting them.
       * Give a one-time plan for free (compensation, support gesture) with a reason; it's
@@ -30,19 +32,33 @@ if Code.ensure_loaded?(Phoenix.LiveView) do
          catalog: catalog,
          plans_by_id: Map.new(plans, &{&1.id, &1}),
          giftable: Enum.filter(plans, &(&1.kind == :one_time and &1.status == :active)),
-         gift_error: nil
+         gift_error: nil,
+         searchable: Config.user_search() != nil,
+         user_label: nil,
+         matches: []
        )}
     end
 
     @impl true
     def handle_params(params, _uri, socket) do
-      {:noreply, socket |> assign(:query, params["user_id"] || "") |> lookup(params["user_id"])}
+      {:noreply,
+       socket
+       |> assign(query: params["q"] || params["user_id"] || "", matches: [])
+       |> find(params)}
     end
 
+    # An id goes straight to the user, so support links keep working. Anything else goes
+    # to the app's search when it has one, otherwise it's checked as an id and explained.
     @impl true
-    def handle_event("lookup", %{"user_id" => user_id}, socket) do
-      query = URI.encode_query(user_id: String.trim(user_id))
-      {:noreply, push_patch(socket, to: page_path(socket, "/users?" <> query))}
+    def handle_event("lookup", %{"query" => query}, socket) do
+      query = String.trim(query)
+
+      params =
+        if socket.assigns.searchable and not uuid?(query),
+          do: [q: query],
+          else: [user_id: query]
+
+      {:noreply, push_patch(socket, to: page_path(socket, "/users?" <> URI.encode_query(params)))}
     end
 
     # "Give a plan" is a developer tool: refused when the tools are off, even if the
@@ -98,24 +114,36 @@ if Code.ensure_loaded?(Phoenix.LiveView) do
 
         <form id="user-lookup" phx-submit="lookup" class="ub-inline">
           <.input
-            id="user-id"
-            name="user_id"
-            label={dgettext("users", "User id")}
+            id="user-query"
+            name="query"
+            label={lookup_label(@searchable)}
             value={@query}
-            placeholder="3f2b9c1e-7a4d-4e10-9b6a-0c5d2e8f1a37"
+            placeholder={if !@searchable, do: "3f2b9c1e-7a4d-4e10-9b6a-0c5d2e8f1a37"}
             dir="ltr"
-            hint={
-              dgettext(
-                "users",
-                "Paste the user's id from your app. It is a long code with dashes. Spaces around it are ignored."
-              )
-            }
+            hint={lookup_hint(@searchable)}
             autocomplete="off"
           />
           <.button type="submit" variant="primary">{dgettext("users", "Look up")}</.button>
         </form>
 
         <p :if={@lookup_error} class="ub-flash ub-flash-error" role="alert">{@lookup_error}</p>
+
+        <div :if={@matches != []} class="ub-card ub-stack" id="user-matches">
+          <p class="ub-muted" style="margin: 0">
+            {dgettext("users", "Several users match. Choose one.")}
+          </p>
+          <.link
+            :for={match <- @matches}
+            patch={href(@ub_lang, @ub_base, "/users?" <> URI.encode_query(user_id: match.id))}
+            dir="auto"
+          >
+            {match.label}
+          </.link>
+        </div>
+
+        <h2 :if={@overview && @user_label} id="user-label" class="ub-h2" dir="auto">
+          {@user_label}
+        </h2>
 
         <div :if={@overview} class="ub-split">
           <div class="ub-stack">
@@ -250,13 +278,74 @@ if Code.ensure_loaded?(Phoenix.LiveView) do
 
     defp page_path(socket, path), do: href(socket.assigns.ub_lang, socket.assigns.ub_base, path)
 
+    defp lookup_label(true), do: dgettext("users", "Find a user")
+    defp lookup_label(false), do: dgettext("users", "User id")
+
+    defp lookup_hint(true),
+      do:
+        dgettext(
+          "users",
+          "Paste the user's id, or type what your app lets you search by, such as a phone number or an email. Spaces around it are ignored."
+        )
+
+    defp lookup_hint(false),
+      do:
+        dgettext(
+          "users",
+          "Paste the user's id from your app. It is a long code with dashes. Spaces around it are ignored."
+        )
+
+    defp uuid?(text), do: match?({:ok, _}, Ecto.UUID.cast(text))
+
+    defp find(socket, %{"user_id" => user_id}) when user_id not in [nil, ""],
+      do: lookup(socket, user_id)
+
+    defp find(socket, %{"q" => query}) when query not in [nil, ""], do: search(socket, query)
+    defp find(socket, _params), do: lookup(socket, nil)
+
+    # One match opens the user, several are listed (see the matches card), none is said.
+    defp search(socket, query) do
+      case Admin.search_users(query, socket.assigns.ub_actor) do
+        {:ok, [%{id: user_id}]} ->
+          lookup(socket, user_id)
+
+        {:ok, []} ->
+          assign(socket,
+            user_id: nil,
+            overview: nil,
+            lookup_error: dgettext("users", "No user found for %{query}.", query: query)
+          )
+
+        {:ok, matches} ->
+          assign(socket, user_id: nil, overview: nil, matches: matches, lookup_error: nil)
+
+        {:error, :not_configured} ->
+          lookup(socket, query)
+
+        {:error, error} ->
+          assign(socket,
+            user_id: nil,
+            overview: nil,
+            lookup_error: error_text(error, socket.assigns.ub_lang)
+          )
+      end
+    end
+
     defp lookup(socket, user_id) when user_id in [nil, ""],
       do: assign(socket, user_id: nil, overview: nil, lookup_error: nil)
 
     defp lookup(socket, user_id) do
+      actor = socket.assigns.ub_actor
+
       with {:ok, uuid} <- Ecto.UUID.cast(user_id),
-           {:ok, overview} <- Admin.user_overview(uuid, socket.assigns.ub_actor) do
-        assign(socket, user_id: uuid, overview: overview, lookup_error: nil)
+           {:ok, overview} <- Admin.user_overview(uuid, actor),
+           {:ok, labels} <- Admin.user_labels([uuid], actor) do
+        assign(socket,
+          user_id: uuid,
+          overview: overview,
+          user_label: labels[uuid],
+          lookup_error: nil
+        )
       else
         :error ->
           assign(socket,

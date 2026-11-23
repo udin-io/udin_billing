@@ -222,4 +222,25 @@ defmodule UdinBilling.Web.PlanFormTest do
 
     assert {"day(s)", "day"} in PlanForm.unit_options()
   end
+
+  describe "provider product ids" do
+    test "only providers that report store purchases by product id get a field" do
+      assert PlanForm.providers() == ["fake", "revenuecat"]
+    end
+
+    test "with only a checkout provider like Paymob, there is no field at all" do
+      paymob = Application.get_env(:udin_billing, :providers) |> Map.take(["paymob"])
+
+      with_env(:providers, paymob, fn ->
+        assert PlanForm.providers() == []
+      end)
+    end
+
+    test "saving keeps ids a plan has for a provider without a field" do
+      plan = plan_fixture(%{provider_product_ids: %{"paymob" => "old_id", "fake" => "f1"}})
+
+      kept = PlanForm.keep_hidden(%{provider_product_ids: %{"fake" => "f2"}}, plan)
+      assert kept.provider_product_ids == %{"paymob" => "old_id", "fake" => "f2"}
+    end
+  end
 end

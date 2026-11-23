@@ -6,7 +6,8 @@ if Code.ensure_loaded?(Phoenix.LiveView) do
     ## Why its own components and styles
     The dashboard is mounted inside different apps, each with its own CSS. It ships its own small, scoped stylesheet (every class starts with `ub-`) so it
     looks the same everywhere and never clashes with the host's styles. Light and dark
-    themes follow the system setting.
+    themes follow the system setting, unless the app pins one with `:dashboard_theme`
+    (marked on the shell as `data-ub-theme`).
     """
     use Phoenix.Component
     use Gettext, backend: UdinBilling.Gettext
@@ -60,12 +61,13 @@ if Code.ensure_loaded?(Phoenix.LiveView) do
           )
         )
         |> assign(:languages, UdinBilling.Config.locales())
+        |> assign(:theme, theme_attr(UdinBilling.Config.dashboard_theme()))
 
       ~H"""
       <%!-- The dashboard sets its own direction from its language (right to left for Arabic),
            whatever the host page uses. The stylesheet never forces a direction, and uses
            start and end instead of left and right, so it mirrors as a whole. --%>
-      <div class="ub" dir={dir(@lang)} lang={@lang}>
+      <div class="ub" dir={dir(@lang)} lang={@lang} data-ub-theme={@theme}>
         <.styles />
         <header class="ub-top">
           <div class="ub-brand">{gettext("Billing")}</div>
@@ -129,6 +131,10 @@ if Code.ensure_loaded?(Phoenix.LiveView) do
 
     defp shown?(:always, _assigns), do: true
     defp shown?(:dev_tools, assigns), do: assigns.dev_tools
+
+    # No attribute for :system, so the stylesheet falls back to the OS and host settings.
+    defp theme_attr(:system), do: nil
+    defp theme_attr(theme), do: Atom.to_string(theme)
 
     attr :flash, :map, required: true
 
@@ -518,14 +524,15 @@ if Code.ensure_loaded?(Phoenix.LiveView) do
           --ub-bad: #b42318; --ub-bad-soft: #fde8e6; --ub-radius: 10px;
           font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Arabic", sans-serif;
           font-size: 14px; line-height: 1.5; color: var(--ub-ink); background: var(--ub-bg); min-height: 100vh; }
-        /* Dark: the OS setting, unless the host app chose a theme with data-theme (Phoenix 1.8 / daisyUI). */
+        /* Dark: the OS setting, unless the host app chose a theme with data-theme (Phoenix 1.8 / daisyUI)
+           or pinned the dashboard with :dashboard_theme (data-ub-theme), which wins over both. */
         @media (prefers-color-scheme: dark) {
-          :root:not([data-theme="light"]) .ub { --ub-bg: #0f1216; --ub-surface: #171b21; --ub-ink: #e7eaf0; --ub-muted: #9aa3b2;
+          :root:not([data-theme="light"]) .ub:not([data-ub-theme="light"]) { --ub-bg: #0f1216; --ub-surface: #171b21; --ub-ink: #e7eaf0; --ub-muted: #9aa3b2;
             --ub-line: #2a303a; --ub-accent: #6d9eff; --ub-accent-ink: #0b1220; --ub-accent-soft: #1b2740;
             --ub-good: #5cc98b; --ub-good-soft: #13281d; --ub-warn: #e3b25c; --ub-warn-soft: #2b2312;
             --ub-bad: #ff8a80; --ub-bad-soft: #2f1716; color-scheme: dark; }
         }
-        [data-theme="dark"] .ub { --ub-bg: #0f1216; --ub-surface: #171b21; --ub-ink: #e7eaf0; --ub-muted: #9aa3b2;
+        [data-theme="dark"] .ub:not([data-ub-theme="light"]), .ub[data-ub-theme="dark"] { --ub-bg: #0f1216; --ub-surface: #171b21; --ub-ink: #e7eaf0; --ub-muted: #9aa3b2;
             --ub-line: #2a303a; --ub-accent: #6d9eff; --ub-accent-ink: #0b1220; --ub-accent-soft: #1b2740;
             --ub-good: #5cc98b; --ub-good-soft: #13281d; --ub-warn: #e3b25c; --ub-warn-soft: #2b2312;
             --ub-bad: #ff8a80; --ub-bad-soft: #2f1716; color-scheme: dark; }

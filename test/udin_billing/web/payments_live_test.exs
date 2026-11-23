@@ -192,4 +192,71 @@ defmodule UdinBilling.Web.PaymentsLiveTest do
       assert has_element?(view, ~s(#payment-#{second.id} a[href*="/users"][href*="lang=ar"]))
     end
   end
+
+  describe "users shown by the app's :user_labels" do
+    defp labels(fun), do: {UdinBilling.Test.UserLabels, fun}
+
+    test "without it, the user column shows the id", %{conn: conn, user: user, purchase: purchase} do
+      pay(purchase, "tx-1")
+      pay(purchase, "tx-2")
+      second = second_payment(purchase)
+
+      {:ok, view, _html} = live(conn, "/admin/billing/payments")
+      assert has_element?(view, "#payment-#{second.id} a", user.id)
+    end
+
+    test "with it, the user column shows the label, still linking to the user", %{
+      conn: conn,
+      user: user,
+      purchase: purchase
+    } do
+      pay(purchase, "tx-1")
+      pay(purchase, "tx-2")
+      second = second_payment(purchase)
+
+      with_env(:user_labels, labels(:by_email), fn ->
+        {:ok, view, _html} = live(conn, "/admin/billing/payments")
+
+        assert has_element?(
+                 view,
+                 ~s(#payment-#{second.id} a[href*="user_id=#{user.id}"]),
+                 "label #{user.email}"
+               )
+
+        refute has_element?(view, "#payment-#{second.id} a", user.id)
+      end)
+    end
+
+    test "every user on the page is labelled in one call", %{conn: conn, purchase: purchase} do
+      other = user_fixture()
+      plan = plan_fixture()
+      {:ok, _} = Purchases.record_paid(other.id, plan.id, "fake", "ref-other")
+      pay(purchase, "tx-1")
+
+      start_supervised!({Agent, fn -> [] end}, id: :calls)
+      |> then(&Process.register(&1, UdinBilling.Test.UserLabels.Calls))
+
+      with_env(:user_labels, labels(:by_email), fn ->
+        {:ok, _view, _html} = live(conn, "/admin/billing/payments?show=all")
+      end)
+
+      calls = Agent.get(UdinBilling.Test.UserLabels.Calls, & &1)
+      assert Enum.all?(calls, &(length(&1) == 2))
+      assert calls != []
+    end
+
+    test "a wrong setting or a wrong answer from the app fails loudly", %{user: user} do
+      with_env(:user_labels, "by_email", fn ->
+        assert_raise ArgumentError, ~r/user_labels/, fn -> UdinBilling.Config.user_labels() end
+      end)
+
+      with_env(:user_labels, labels(:broken), fn ->
+        admin = user_fixture(%{admin: true})
+
+        assert_raise ArgumentError, ~r/user_labels/, fn ->
+          UdinBilling.Admin.user_labels([user.id], admin)
+        end
+      end)
+    end
+  end
 end

@@ -169,6 +169,81 @@ defmodule UdinBilling.Admin do
     end
   end
 
+  @user_search_limit 10
+
+  @doc """
+  Finds users by what the admin typed, through the app's `:user_search` hook (see
+  `UdinBilling.Config`): a phone number, an email, whatever the app supports.
+
+  Returns `{:ok, matches}` with at most #{@user_search_limit} `%{id: id, label: label}`,
+  `{:error, :not_configured}` when the app has no hook, or `{:error, :forbidden}` for a
+  non admin. Raises when the hook answers anything but a list of such maps, so a broken
+  hook is found at once instead of showing "no user found".
+  """
+  @spec search_users(String.t(), actor()) ::
+          result([%{id: Ecto.UUID.t(), label: String.t()}]) | {:error, :not_configured}
+  def search_users(query, actor) do
+    with :ok <- authorize(actor),
+         {module, function} <- Config.user_search() || {:error, :not_configured} do
+      matches = apply(module, function, [query])
+      {:ok, matches |> validate_matches!(module, function) |> Enum.take(@user_search_limit)}
+    end
+  end
+
+  defp validate_matches!(matches, module, function) when is_list(matches) do
+    Enum.map(matches, fn
+      %{id: id, label: label} when is_binary(id) and is_binary(label) ->
+        %{id: id, label: label}
+
+      other ->
+        raise ArgumentError,
+              ":udin_billing :user_search #{inspect(module)}.#{function}/1 returned " <>
+                "#{inspect(other)} in its list, expected %{id: user_id, label: text}"
+    end)
+  end
+
+  defp validate_matches!(other, module, function) do
+    raise ArgumentError,
+          ":udin_billing :user_search #{inspect(module)}.#{function}/1 returned " <>
+            "#{inspect(other)}, expected a list of %{id: user_id, label: text}"
+  end
+
+  @doc """
+  Labels for `user_ids` from the app's `:user_labels` hook (see `UdinBilling.Config`), in
+  one call: `{:ok, %{user_id => label}}`. Ids the app doesn't label are left out, so
+  callers fall back to the id. Without the hook it's `{:ok, %{}}`, and a non admin gets
+  `{:error, :forbidden}`. Raises when the hook answers anything but a map of texts.
+  """
+  @spec user_labels([Ecto.UUID.t()], actor()) :: result(%{Ecto.UUID.t() => String.t()})
+  def user_labels(user_ids, actor) do
+    with :ok <- authorize(actor) do
+      case {Config.user_labels(), Enum.uniq(user_ids)} do
+        {nil, _ids} -> {:ok, %{}}
+        {_hook, []} -> {:ok, %{}}
+        {{module, function}, ids} -> {:ok, call_labels!(module, function, ids)}
+      end
+    end
+  end
+
+  defp call_labels!(module, function, ids) do
+    case apply(module, function, [ids]) do
+      labels when is_map(labels) ->
+        Map.filter(labels, fn
+          {id, label} when is_binary(id) and is_binary(label) -> true
+          entry -> invalid_labels!(module, function, entry)
+        end)
+
+      other ->
+        invalid_labels!(module, function, other)
+    end
+  end
+
+  defp invalid_labels!(module, function, value) do
+    raise ArgumentError,
+          ":udin_billing :user_labels #{inspect(module)}.#{function}/1 returned " <>
+            "#{inspect(value)}, expected a map of %{user_id => text}"
+  end
+
   @doc """
   One user's read-only billing panel: each counter's balance and reset time,
   the switches that are on, and the plans granting them.
