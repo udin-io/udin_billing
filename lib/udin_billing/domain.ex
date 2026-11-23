@@ -11,5 +11,11 @@ defmodule UdinBilling.Domain do
     resource UdinBilling.Feature
     resource UdinBilling.Plan
     resource UdinBilling.PlanFeature
+    resource UdinBilling.Account
+    resource UdinBilling.Purchase
+    resource UdinBilling.Subscription
+    resource UdinBilling.Grant
+    resource UdinBilling.Usage
+    resource UdinBilling.ProviderEvent
   end
 end

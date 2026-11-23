@@ -88,6 +88,7 @@ defmodule UdinBilling.Plan do
       primary? true
       accept @editable_fields
       argument :features, :map, default: %{}
+      change UdinBilling.Changes.DefaultCycle
       change UdinBilling.Changes.SyncPlanFeatures
     end
 
@@ -96,6 +97,7 @@ defmodule UdinBilling.Plan do
       accept @editable_fields
       argument :features, :map
       require_atomic? false
+      change UdinBilling.Changes.DefaultCycle
       change UdinBilling.Changes.SyncPlanFeatures
     end
 
@@ -142,6 +144,7 @@ defmodule UdinBilling.Plan do
     # still be edited or deactivated.
     validate UdinBilling.Validations.EnabledMode, where: [changing(:kind)]
     validate UdinBilling.Validations.UniqueProductIds, where: [changing(:provider_product_ids)]
+    validate UdinBilling.Validations.TermsLockedWhenSold, on: [:update]
     validate {UdinBilling.Validations.Translations, attribute: :name, required: true}
     validate {UdinBilling.Validations.Translations, attribute: :description}
 
@@ -158,6 +161,8 @@ defmodule UdinBilling.Plan do
     validate present([:validity_unit, :validity_count]),
       where: [attribute_equals(:kind, :recurring)],
       message: "recurring plans need a billing period"
+
+    validate UdinBilling.Validations.CycleWithinPeriod
 
     validate compare(:price, less_than_or_equal_to: 0),
       where: [attribute_equals(:kind, :free)],
@@ -236,6 +241,8 @@ defmodule UdinBilling.Plan do
       `:continue` - the free allowance carries on: units used before stay used and a
       lifetime allowance is never given again. `:fresh_start` - a new free allowance
       each time a subscription ends (lifetime units again, or a new cycle from that day).
+      A subscription ends once its store grace period is over too, and a refunded one
+      never counts.
       """
 
     attribute :sort_order, :integer, allow_nil?: false, default: 0, public?: true
@@ -274,6 +281,42 @@ defmodule UdinBilling.Plan do
   def period_label(%{validity_unit: :month, validity_count: 1}), do: :monthly
   def period_label(%{validity_unit: :year, validity_count: 1}), do: :yearly
   def period_label(%{}), do: :custom
+
+  # Paid purchases count even after a refund; pending, failed or cancelled checkouts don't,
+  # so an abandoned checkout never locks a plan.
+  @sold_statuses [:paid, :refund_required, :refunded]
+
+  @doc """
+  True when anyone bought `plan_id`: a paid (or later refunded) purchase or any
+  subscription references it. Sold plans keep their terms: see
+  `UdinBilling.Validations.TermsLockedWhenSold`.
+  """
+  @spec sold?(Ecto.UUID.t() | nil) :: boolean()
+  def sold?(nil), do: false
+  def sold?(plan_id), do: MapSet.member?(sold_ids([plan_id]), plan_id)
+
+  @doc "The ids among `plan_ids` that anyone bought (see `sold?/1`), in two queries."
+  @spec sold_ids([Ecto.UUID.t()]) :: MapSet.t(Ecto.UUID.t())
+  def sold_ids([]), do: MapSet.new()
+
+  def sold_ids(plan_ids) do
+    purchases =
+      UdinBilling.Purchase
+      |> Ash.Query.filter(plan_id in ^plan_ids and status in ^@sold_statuses)
+
+    subscriptions = Ash.Query.filter(UdinBilling.Subscription, plan_id in ^plan_ids)
+
+    # One row per plan, not one per sale: the dashboard calls this on every page load.
+    [purchases, subscriptions]
+    |> Enum.flat_map(fn query ->
+      query
+      |> Ash.Query.distinct([:plan_id])
+      |> Ash.Query.select([:plan_id])
+      |> Ash.read!(authorize?: false)
+      |> Enum.map(& &1.plan_id)
+    end)
+    |> MapSet.new()
+  end
 
   @doc """
   A translated field (`:name`, `:description`) of a plan or feature for `locale`, falling

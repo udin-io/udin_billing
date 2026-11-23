@@ -52,7 +52,7 @@ defmodule UdinBilling.Changes.SyncPlanFeatures do
   defp known(catalog, key) do
     case Map.fetch(catalog, key) do
       {:ok, feature} -> {:ok, feature}
-      :error -> {:error, "unknown feature; add it to the feature catalog first"}
+      :error -> {:error, "unknown feature, add it to the feature catalog first"}
     end
   end
 

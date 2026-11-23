@@ -21,8 +21,56 @@
       "references": null,
       "scale": null,
       "size": null,
-      "source": "anchor_at",
-      "type": "timestamptz(6)"
+      "source": "key",
+      "type": "text"
+    },
+    {
+      "allow_nil?": false,
+      "default": "nil",
+      "generated?": false,
+      "precision": null,
+      "primary_key?": false,
+      "references": null,
+      "scale": null,
+      "size": null,
+      "source": "kind",
+      "type": "text"
+    },
+    {
+      "allow_nil?": false,
+      "default": "%{}",
+      "generated?": false,
+      "precision": null,
+      "primary_key?": false,
+      "references": null,
+      "scale": null,
+      "size": null,
+      "source": "name",
+      "type": "map"
+    },
+    {
+      "allow_nil?": false,
+      "default": "%{}",
+      "generated?": false,
+      "precision": null,
+      "primary_key?": false,
+      "references": null,
+      "scale": null,
+      "size": null,
+      "source": "description",
+      "type": "map"
+    },
+    {
+      "allow_nil?": false,
+      "default": "0",
+      "generated?": false,
+      "precision": null,
+      "primary_key?": false,
+      "references": null,
+      "scale": null,
+      "size": null,
+      "source": "sort_order",
+      "type": "bigint"
     },
     {
       "allow_nil?": false,
@@ -47,37 +95,6 @@
       "size": null,
       "source": "updated_at",
       "type": "timestamptz(6)"
-    },
-    {
-      "allow_nil?": false,
-      "default": "nil",
-      "generated?": false,
-      "precision": null,
-      "primary_key?": false,
-      "references": {
-        "deferrable": false,
-        "destination_attribute": "id",
-        "destination_attribute_default": null,
-        "destination_attribute_generated": null,
-        "index?": false,
-        "match_type": null,
-        "match_with": null,
-        "multitenancy": {
-          "attribute": null,
-          "global": null,
-          "strategy": null
-        },
-        "name": "billing_accounts_user_id_fkey",
-        "on_delete": "restrict",
-        "on_update": null,
-        "primary_key?": true,
-        "schema": "public",
-        "table": "users"
-      },
-      "scale": null,
-      "size": null,
-      "source": "user_id",
-      "type": "uuid"
     }
   ],
   "base_filter": null,
@@ -86,19 +103,19 @@
   "custom_indexes": [],
   "custom_statements": [],
   "has_create_action": true,
-  "hash": "B52E3715DEE936C6CA282F817A140B3229F8BE9A0E390164FEF70FB62D105E06",
+  "hash": "6EEC1686E343FB17A28EF8B8A82122D8F8774783FD57A94C4CC0213F589E60D7",
   "identities": [
     {
       "all_tenants?": false,
       "base_filter": null,
-      "index_name": "billing_accounts_unique_user_index",
+      "index_name": "billing_features_unique_key_index",
       "keys": [
         {
           "type": "atom",
-          "value": "user_id"
+          "value": "key"
         }
       ],
-      "name": "unique_user",
+      "name": "unique_key",
       "nils_distinct?": true,
       "where": null
     }
@@ -110,5 +127,5 @@
   },
   "repo": "Elixir.UdinBilling.TestRepo",
   "schema": null,
-  "table": "billing_accounts"
+  "table": "billing_features"
 }

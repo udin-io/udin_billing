@@ -94,6 +94,7 @@ defmodule UdinBilling.TestRepo.Migrations.Initial do
       add(:id, :uuid, null: false, default: fragment("gen_random_uuid()"), primary_key: true)
       add(:provider, :text, null: false)
       add(:provider_ref, :text)
+      add(:payment_ref, :text)
       add(:amount, :decimal, null: false)
       add(:currency, :text, null: false)
       add(:status, :text, null: false, default: "pending")
@@ -124,11 +125,18 @@ defmodule UdinBilling.TestRepo.Migrations.Initial do
       )
 
       add(:plan_id, :uuid, null: false)
+      add(:duplicate_of_id, :uuid)
     end
+
+    create index(:billing_purchases, [:duplicate_of_id])
 
     create index(:billing_purchases, [:status, :inserted_at])
 
     create index(:billing_purchases, [:user_id, :status, :access_expires_at])
+
+    create unique_index(:billing_purchases, [:provider, :payment_ref],
+             name: "billing_purchases_unique_payment_ref_index"
+           )
 
     create unique_index(:billing_purchases, [:provider, :provider_ref],
              name: "billing_purchases_unique_provider_ref_index"
@@ -179,6 +187,17 @@ defmodule UdinBilling.TestRepo.Migrations.Initial do
         references(:billing_plans,
           column: :id,
           name: "billing_purchases_plan_id_fkey",
+          type: :uuid,
+          prefix: "public",
+          on_delete: :restrict
+        )
+      )
+
+      modify(
+        :duplicate_of_id,
+        references(:billing_purchases,
+          column: :id,
+          name: "billing_purchases_duplicate_of_id_fkey",
           type: :uuid,
           prefix: "public",
           on_delete: :restrict
@@ -503,7 +522,10 @@ defmodule UdinBilling.TestRepo.Migrations.Initial do
 
     drop(constraint(:billing_purchases, "billing_purchases_plan_id_fkey"))
 
+    drop(constraint(:billing_purchases, "billing_purchases_duplicate_of_id_fkey"))
+
     alter table(:billing_purchases) do
+      modify(:duplicate_of_id, :uuid)
       modify(:plan_id, :uuid)
     end
 
@@ -533,9 +555,17 @@ defmodule UdinBilling.TestRepo.Migrations.Initial do
       )
     )
 
+    drop_if_exists(
+      unique_index(:billing_purchases, [:provider, :payment_ref],
+        name: "billing_purchases_unique_payment_ref_index"
+      )
+    )
+
     drop_if_exists(index(:billing_purchases, [:user_id, :status, :access_expires_at]))
 
     drop_if_exists(index(:billing_purchases, [:status, :inserted_at]))
+
+    drop_if_exists(index(:billing_purchases, [:duplicate_of_id]))
 
     drop(table(:billing_purchases))
 

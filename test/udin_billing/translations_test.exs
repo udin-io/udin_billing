@@ -70,6 +70,16 @@ defmodule UdinBilling.TranslationsTest do
                  authorize?: false
                )
     end
+
+    test "the checkout's payment page shows the plan name in the buyer's language" do
+      plan = plan_fixture(%{name: %{"en" => "Weekly", "ar" => "أسبوعي"}})
+      user = user_fixture()
+
+      assert {:ok, %{purchase: purchase}} =
+               UdinBilling.checkout(user.id, plan.id, "fake", %{locale: "ar"})
+
+      assert purchase.metadata["item_name"] == "أسبوعي"
+    end
   end
 
   defp plan_attrs(attrs) do

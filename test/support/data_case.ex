@@ -7,13 +7,23 @@ defmodule UdinBilling.DataCase do
   """
   use ExUnit.CaseTemplate
 
-  alias UdinBilling.{Feature, Plan}
+  alias UdinBilling.{Feature, Plan, Purchases}
 
   using do
     quote do
       import UdinBilling.DataCase
 
-      alias UdinBilling.{Feature, Plan, PlanFeature}
+      alias UdinBilling.{
+        Account,
+        Feature,
+        Grant,
+        Plan,
+        PlanFeature,
+        ProviderEvent,
+        Purchase,
+        Subscription,
+        Usage
+      }
     end
   end
 
@@ -129,6 +139,36 @@ defmodule UdinBilling.DataCase do
         },
         attrs
       )
+    )
+  end
+
+  @doc "Starts and confirms a purchase of `plan` for `user`; returns the paid purchase."
+  def paid_purchase_fixture(user, plan, opts \\ []) do
+    {:ok, purchase} = Purchases.start(user.id, plan.id, "fake")
+
+    {:ok, paid} =
+      Purchases.confirm_payment(purchase.id, %{
+        amount: plan.price,
+        currency: plan.currency,
+        paid_at: Keyword.get(opts, :paid_at)
+      })
+
+    paid
+  end
+
+  @doc "A subscription state as a provider adapter would report it."
+  def sub_state(attrs \\ %{}) do
+    start = Map.get(attrs, :period_starts_at, ~U[2026-10-10 09:00:00.000000Z])
+
+    Map.merge(
+      %{
+        provider_ref: "sub-#{System.unique_integer([:positive])}",
+        product_id: "basic_monthly",
+        period_starts_at: start,
+        period_ends_at: DateTime.shift(start, month: 1),
+        auto_renew: true
+      },
+      attrs
     )
   end
 end

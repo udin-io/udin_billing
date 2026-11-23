@@ -140,6 +140,50 @@ defmodule UdinBilling.PlanTest do
                )
     end
 
+    test "a subscription plan with no refill refills once per billing period" do
+      recurring = %{kind: :recurring, cycle_unit: nil, cycle_count: nil}
+
+      assert {:ok, %{cycle_unit: :month, cycle_count: 1}} =
+               Ash.create(
+                 Plan,
+                 attrs(Map.merge(recurring, %{validity_unit: :month, validity_count: 1})),
+                 authorize?: false
+               )
+
+      assert {:ok, %{cycle_unit: :year, cycle_count: 1}} =
+               Ash.create(
+                 Plan,
+                 attrs(Map.merge(recurring, %{validity_unit: :year, validity_count: 1})),
+                 authorize?: false
+               )
+    end
+
+    test "a one-time plan with no refill keeps none" do
+      assert {:ok, %{cycle_unit: nil}} =
+               Ash.create(Plan, attrs(%{validity_unit: :month, validity_count: 1}),
+                 authorize?: false
+               )
+    end
+
+    test "a subscription plan can't refill less often than it's paid" do
+      monthly = %{kind: :recurring, validity_unit: :month, validity_count: 1}
+
+      assert {:error, _} =
+               Ash.create(Plan, attrs(Map.merge(monthly, %{cycle_unit: :year, cycle_count: 1})),
+                 authorize?: false
+               )
+
+      assert {:error, _} =
+               Ash.create(Plan, attrs(Map.merge(monthly, %{cycle_unit: :week, cycle_count: 5})),
+                 authorize?: false
+               )
+
+      assert {:ok, _} =
+               Ash.create(Plan, attrs(Map.merge(monthly, %{cycle_unit: :week, cycle_count: 1})),
+                 authorize?: false
+               )
+    end
+
     test "only admins write plans; anyone reads the catalog" do
       admin = user_fixture(%{admin: true})
       rider = user_fixture()
@@ -147,6 +191,32 @@ defmodule UdinBilling.PlanTest do
       assert {:ok, _} = Ash.create(Plan, attrs(%{}), actor: admin)
       assert {:error, %Ash.Error.Forbidden{}} = Ash.create(Plan, attrs(%{}), actor: rider)
       assert [_] = Ash.read!(Plan, action: :purchasable, actor: rider)
+    end
+  end
+
+  describe "sold_ids/1" do
+    test "names each plan that was bought, once, however many sales it had" do
+      user = user_fixture()
+      sold = plan_fixture(%{code: "sold"})
+      subscribed = subscription_plan_fixture(%{code: "subscribed"})
+      unsold = plan_fixture(%{code: "unsold"})
+
+      for _ <- 1..3, do: paid_purchase_fixture(user, sold)
+
+      {:ok, _} =
+        UdinBilling.Subscriptions.apply_state(
+          "fake",
+          user.id,
+          sub_state(%{product_id: "basic_monthly"}),
+          now: ~U[2026-10-10 09:01:00.000000Z]
+        )
+
+      ids = Plan.sold_ids([sold.id, subscribed.id, unsold.id])
+
+      assert MapSet.equal?(ids, MapSet.new([sold.id, subscribed.id]))
+      assert Plan.sold?(sold.id)
+      refute Plan.sold?(unsold.id)
+      assert Plan.sold_ids([]) == MapSet.new()
     end
   end
 

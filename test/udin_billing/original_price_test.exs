@@ -5,6 +5,10 @@ defmodule UdinBilling.OriginalPriceTest do
   """
   use UdinBilling.DataCase, async: false
 
+  alias UdinBilling.Admin
+
+  defp admin, do: %{admin: true}
+
   test "is optional and must be higher than the price" do
     assert plan_fixture().original_price == nil
     assert plan_fixture(%{original_price: Decimal.new(200)}).original_price |> Decimal.equal?(200)
@@ -27,6 +31,24 @@ defmodule UdinBilling.OriginalPriceTest do
 
       assert Exception.message(error) =~ "original_price"
     end
+  end
+
+  test "buyers pay the price, not the original price" do
+    plan = plan_fixture(%{price: Decimal.new(150), original_price: Decimal.new(200)})
+    {:ok, purchase} = UdinBilling.Purchases.start(user_fixture().id, plan.id, "fake")
+
+    assert Decimal.equal?(purchase.amount, 150)
+  end
+
+  test "a sale can start or end on a plan that has buyers" do
+    plan = plan_fixture(%{price: Decimal.new(150)})
+    paid_purchase_fixture(user_fixture(), plan)
+
+    assert {:ok, plan} = Admin.update_plan(plan, %{original_price: Decimal.new(200)}, admin())
+    assert Decimal.equal?(plan.original_price, 200)
+
+    assert {:ok, %{original_price: nil}} =
+             Admin.update_plan(plan, %{original_price: nil}, admin())
   end
 
   test "travels in the catalog file" do

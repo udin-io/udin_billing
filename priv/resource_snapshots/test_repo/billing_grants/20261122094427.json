@@ -21,7 +21,7 @@
       "references": null,
       "scale": null,
       "size": null,
-      "source": "provider",
+      "source": "feature_key",
       "type": "text"
     },
     {
@@ -33,7 +33,7 @@
       "references": null,
       "scale": null,
       "size": null,
-      "source": "provider_ref",
+      "source": "source_key",
       "type": "text"
     },
     {
@@ -45,127 +45,7 @@
       "references": null,
       "scale": null,
       "size": null,
-      "source": "store",
-      "type": "text"
-    },
-    {
-      "allow_nil?": false,
-      "default": "\"active\"",
-      "generated?": false,
-      "precision": null,
-      "primary_key?": false,
-      "references": null,
-      "scale": null,
-      "size": null,
-      "source": "status",
-      "type": "text"
-    },
-    {
-      "allow_nil?": false,
-      "default": "true",
-      "generated?": false,
-      "precision": null,
-      "primary_key?": false,
-      "references": null,
-      "scale": null,
-      "size": null,
-      "source": "auto_renew",
-      "type": "boolean"
-    },
-    {
-      "allow_nil?": false,
-      "default": "nil",
-      "generated?": false,
-      "precision": null,
-      "primary_key?": false,
-      "references": null,
-      "scale": null,
-      "size": null,
-      "source": "period_starts_at",
-      "type": "timestamptz(6)"
-    },
-    {
-      "allow_nil?": false,
-      "default": "nil",
-      "generated?": false,
-      "precision": null,
-      "primary_key?": false,
-      "references": null,
-      "scale": null,
-      "size": null,
-      "source": "period_ends_at",
-      "type": "timestamptz(6)"
-    },
-    {
-      "allow_nil?": true,
-      "default": "nil",
-      "generated?": false,
-      "precision": null,
-      "primary_key?": false,
-      "references": null,
-      "scale": null,
-      "size": null,
-      "source": "grace_ends_at",
-      "type": "timestamptz(6)"
-    },
-    {
-      "allow_nil?": false,
-      "default": "nil",
-      "generated?": false,
-      "precision": null,
-      "primary_key?": false,
-      "references": null,
-      "scale": null,
-      "size": null,
-      "source": "access_ends_at",
-      "type": "timestamptz(6)"
-    },
-    {
-      "allow_nil?": true,
-      "default": "nil",
-      "generated?": false,
-      "precision": null,
-      "primary_key?": false,
-      "references": null,
-      "scale": null,
-      "size": null,
-      "source": "refunded_at",
-      "type": "timestamptz(6)"
-    },
-    {
-      "allow_nil?": false,
-      "default": "%{}",
-      "generated?": false,
-      "precision": null,
-      "primary_key?": false,
-      "references": null,
-      "scale": null,
-      "size": null,
-      "source": "features",
-      "type": "map"
-    },
-    {
-      "allow_nil?": true,
-      "default": "nil",
-      "generated?": false,
-      "precision": null,
-      "primary_key?": false,
-      "references": null,
-      "scale": null,
-      "size": null,
-      "source": "validity_unit",
-      "type": "text"
-    },
-    {
-      "allow_nil?": true,
-      "default": "nil",
-      "generated?": false,
-      "precision": null,
-      "primary_key?": false,
-      "references": null,
-      "scale": null,
-      "size": null,
-      "source": "validity_count",
+      "source": "amount",
       "type": "bigint"
     },
     {
@@ -177,8 +57,20 @@
       "references": null,
       "scale": null,
       "size": null,
-      "source": "cycle_unit",
-      "type": "text"
+      "source": "remaining",
+      "type": "bigint"
+    },
+    {
+      "allow_nil?": false,
+      "default": "nil",
+      "generated?": false,
+      "precision": null,
+      "primary_key?": false,
+      "references": null,
+      "scale": null,
+      "size": null,
+      "source": "starts_at",
+      "type": "timestamptz(6)"
     },
     {
       "allow_nil?": true,
@@ -189,8 +81,20 @@
       "references": null,
       "scale": null,
       "size": null,
-      "source": "cycle_count",
-      "type": "bigint"
+      "source": "expires_at",
+      "type": "timestamptz(6)"
+    },
+    {
+      "allow_nil?": true,
+      "default": "nil",
+      "generated?": false,
+      "precision": null,
+      "primary_key?": false,
+      "references": null,
+      "scale": null,
+      "size": null,
+      "source": "revoked_at",
+      "type": "timestamptz(6)"
     },
     {
       "allow_nil?": false,
@@ -235,7 +139,7 @@
           "global": null,
           "strategy": null
         },
-        "name": "billing_subscriptions_user_id_fkey",
+        "name": "billing_grants_user_id_fkey",
         "on_delete": "restrict",
         "on_update": null,
         "primary_key?": true,
@@ -266,7 +170,7 @@
           "global": null,
           "strategy": null
         },
-        "name": "billing_subscriptions_plan_id_fkey",
+        "name": "billing_grants_plan_id_fkey",
         "on_delete": "restrict",
         "on_update": null,
         "primary_key?": true,
@@ -277,10 +181,81 @@
       "size": null,
       "source": "plan_id",
       "type": "uuid"
+    },
+    {
+      "allow_nil?": true,
+      "default": "nil",
+      "generated?": false,
+      "precision": null,
+      "primary_key?": false,
+      "references": {
+        "deferrable": false,
+        "destination_attribute": "id",
+        "destination_attribute_default": null,
+        "destination_attribute_generated": null,
+        "index?": false,
+        "match_type": null,
+        "match_with": null,
+        "multitenancy": {
+          "attribute": null,
+          "global": null,
+          "strategy": null
+        },
+        "name": "billing_grants_purchase_id_fkey",
+        "on_delete": "restrict",
+        "on_update": null,
+        "primary_key?": true,
+        "schema": "public",
+        "table": "billing_purchases"
+      },
+      "scale": null,
+      "size": null,
+      "source": "purchase_id",
+      "type": "uuid"
+    },
+    {
+      "allow_nil?": true,
+      "default": "nil",
+      "generated?": false,
+      "precision": null,
+      "primary_key?": false,
+      "references": {
+        "deferrable": false,
+        "destination_attribute": "id",
+        "destination_attribute_default": null,
+        "destination_attribute_generated": null,
+        "index?": false,
+        "match_type": null,
+        "match_with": null,
+        "multitenancy": {
+          "attribute": null,
+          "global": null,
+          "strategy": null
+        },
+        "name": "billing_grants_subscription_id_fkey",
+        "on_delete": "restrict",
+        "on_update": null,
+        "primary_key?": true,
+        "schema": "public",
+        "table": "billing_subscriptions"
+      },
+      "scale": null,
+      "size": null,
+      "source": "subscription_id",
+      "type": "uuid"
     }
   ],
   "base_filter": null,
-  "check_constraints": [],
+  "check_constraints": [
+    {
+      "attribute": [
+        "remaining"
+      ],
+      "base_filter": null,
+      "check": "remaining IS NULL OR remaining >= 0",
+      "name": "remaining_not_negative"
+    }
+  ],
   "create_table_options": null,
   "custom_indexes": [
     {
@@ -288,7 +263,8 @@
       "concurrently": false,
       "error_fields": [
         "user_id",
-        "access_ends_at"
+        "feature_key",
+        "expires_at"
       ],
       "fields": [
         {
@@ -297,7 +273,55 @@
         },
         {
           "type": "atom",
-          "value": "access_ends_at"
+          "value": "feature_key"
+        },
+        {
+          "type": "atom",
+          "value": "expires_at"
+        }
+      ],
+      "include": null,
+      "message": null,
+      "name": null,
+      "nulls_distinct": true,
+      "prefix": null,
+      "table": null,
+      "unique": false,
+      "using": null,
+      "where": null
+    },
+    {
+      "all_tenants?": false,
+      "concurrently": false,
+      "error_fields": [
+        "purchase_id"
+      ],
+      "fields": [
+        {
+          "type": "atom",
+          "value": "purchase_id"
+        }
+      ],
+      "include": null,
+      "message": null,
+      "name": null,
+      "nulls_distinct": true,
+      "prefix": null,
+      "table": null,
+      "unique": false,
+      "using": null,
+      "where": null
+    },
+    {
+      "all_tenants?": false,
+      "concurrently": false,
+      "error_fields": [
+        "subscription_id"
+      ],
+      "fields": [
+        {
+          "type": "atom",
+          "value": "subscription_id"
         }
       ],
       "include": null,
@@ -313,23 +337,27 @@
   ],
   "custom_statements": [],
   "has_create_action": true,
-  "hash": "3202C5AC916F6837E3EB9C3978118ADA464975373BB379939B6B7BAD3DD407F4",
+  "hash": "358EEC0F2D38F642BC7AAB4FFDB4117375884ADE4BC029BA5D0BA0149615AC31",
   "identities": [
     {
       "all_tenants?": false,
       "base_filter": null,
-      "index_name": "billing_subscriptions_unique_provider_ref_index",
+      "index_name": "billing_grants_unique_source_index",
       "keys": [
         {
           "type": "atom",
-          "value": "provider"
+          "value": "user_id"
         },
         {
           "type": "atom",
-          "value": "provider_ref"
+          "value": "source_key"
+        },
+        {
+          "type": "atom",
+          "value": "feature_key"
         }
       ],
-      "name": "unique_provider_ref",
+      "name": "unique_source",
       "nils_distinct?": true,
       "where": null
     }
@@ -341,5 +369,5 @@
   },
   "repo": "Elixir.UdinBilling.TestRepo",
   "schema": null,
-  "table": "billing_subscriptions"
+  "table": "billing_grants"
 }

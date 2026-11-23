@@ -120,6 +120,21 @@ defmodule UdinBilling.CatalogTest do
       assert feature_by_key("rides").name["en"] == "Ride credits"
     end
 
+    test "a subscription plan imported with no refill refills once per period" do
+      subscription_plan_fixture(%{code: "pro"})
+
+      json =
+        Catalog.export()
+        |> update_in(["plans"], fn plans ->
+          Enum.map(plans, &%{&1 | "cycle_unit" => nil, "cycle_count" => nil})
+        end)
+        |> Catalog.encode()
+
+      export_and_reset()
+      assert {:ok, _} = import!(json)
+      assert %{cycle_unit: :month, cycle_count: 1} = plan_by_code("pro")
+    end
+
     test "is all or nothing: one bad plan writes nothing" do
       json =
         Catalog.encode(%{
