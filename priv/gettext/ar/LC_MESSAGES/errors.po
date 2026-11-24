@@ -1,0 +1,177 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "%{kind} plans are disabled, enabled: %{modes}"
+msgstr "باقات النوع %{kind} متوقفة. المتاح: %{modes}"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "%{provider} product %{id} is already used by plan %{code}"
+msgstr "معرّف المنتج %{id} مستخدم بالفعل في الباقة %{code} (%{provider})"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "a plan still uses this feature. Remove it from plans first"
+msgstr "ما زالت باقة تستخدم هذه الميزة. أزلها من الباقات أولًا"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "billing period length"
+msgstr "طول مدة الاشتراك"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "billing period unit"
+msgstr "وحدة مدة الاشتراك"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "currency"
+msgstr "العملة"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "currency must be an uppercase ISO 4217 code, e.g. EGP"
+msgstr "رمز العملة يجب أن يكون بحروف إنجليزية كبيرة مثل EGP"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "currency must be one of %{list}"
+msgstr "العملة يجب أن تكون واحدة من %{list}"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "enter a whole number above 0"
+msgstr "اكتب رقمًا صحيحًا أكبر من 0"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "free plans must cost 0"
+msgstr "الباقات المجانية يجب أن يكون سعرها 0"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "has already been taken"
+msgstr "مستخدم بالفعل"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "is invalid"
+msgstr "غير صالح"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "is required"
+msgstr "مطلوب"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "missing text for %{langs}"
+msgstr "النص ناقص للغات: %{langs}"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "must be higher than the price"
+msgstr "يجب أن يكون أعلى من السعر"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "must be less than or equal to %{max}"
+msgstr "يجب ألا يزيد عن %{max}"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "must be more than or equal to %{min}"
+msgstr "يجب ألا يقل عن %{min}"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "not enough units left"
+msgstr "الرصيد المتبقي غير كافٍ"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "only a free plan can be the default"
+msgstr "الباقة الافتراضية يجب أن تكون مجانية"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "paid amount doesn't match the price"
+msgstr "المبلغ المدفوع لا يطابق السعر"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "paid plans must have a price"
+msgstr "الباقات المدفوعة يجب أن يكون لها سعر"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "plan type"
+msgstr "نوع الباقة"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "price"
+msgstr "السعر"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "recurring plans need a billing period"
+msgstr "الباقات المتجددة تحتاج إلى مدة اشتراك"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "refill length"
+msgstr "طول فترة تجديد الرصيد"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "refill unit"
+msgstr "وحدة تجديد الرصيد"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "the app's code uses this feature, so it can't be deleted"
+msgstr "كود التطبيق يستخدم هذه الميزة، لذلك لا يمكن حذفها"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "the refill can't be longer than the billing period"
+msgstr "فترة تجديد الرصيد لا يمكن أن تكون أطول من مدة الاشتراك"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "this plan has buyers, so %{terms} can't change: create a new version and take this one off sale"
+msgstr "هذه الباقة لها مشترون، لذلك لا يمكن تغيير %{terms}. أنشئ نسخة جديدة وأوقف بيع هذه النسخة"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "unknown feature, add it to the feature catalog first"
+msgstr "ميزة غير معروفة. أضفها إلى كتالوج الميزات أولًا"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "unknown language %{lang}, configured: %{langs}"
+msgstr "لغة غير معروفة %{lang}، اللغات المتاحة: %{langs}"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "use lowercase letters, digits and underscores, starting with a letter"
+msgstr "استخدم حروفًا إنجليزية صغيرة وأرقامًا وشرطة سفلية، وابدأ بحرف"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "user not found"
+msgstr "المستخدم غير موجود"

@@ -1,0 +1,247 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "%{date} UTC"
+msgstr "%{date} بتوقيت UTC"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "A counter is a number of units the user can spend. Left is what they can still use. Of is how many they got. The last column shows when the units refill or expire."
+msgstr "الرصيد عدد من الوحدات يستطيع المستخدم استخدامها. المتبقي هو ما يمكنه استخدامه الآن. من هو عدد ما حصل عليه. يبيّن العمود الأخير موعد تجديد الوحدات أو انتهائها."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "A gift adds a one-time plan to this user for free. No payment is taken. It is saved as a purchase of 0 with your name and the reason, and you can't undo it here."
+msgstr "الهدية تضيف باقة لمرة واحدة لهذا المستخدم مجانًا. لا يُسحب أي مبلغ. تُسجَّل كعملية شراء بقيمة 0 مع اسمك والسبب، ولا يمكنك التراجع عنها من هنا."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "A switch is a feature that is simply on or off for this user."
+msgstr "ميزة التشغيل أو الإيقاف إما مفعّلة لهذا المستخدم وإما لا."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Choose a plan."
+msgstr "اختر باقة."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Counters"
+msgstr "الأرصدة"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Default plan"
+msgstr "الباقة الافتراضية"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Developer tools are turned off here."
+msgstr "أدوات المطوّر متوقفة هنا."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Feature"
+msgstr "الميزة"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: a sorry for a service problem"
+msgstr "مثال: اعتذار عن مشكلة في الخدمة"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Gave %{code} to this user."
+msgstr "تم منح %{code} لهذا المستخدم."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Give a plan"
+msgstr "منح باقة"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Give plan"
+msgstr "منح الباقة"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Give this plan for free?"
+msgstr "هل تريد منح هذه الباقة مجانًا؟"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Granted by"
+msgstr "تمنحها"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Left"
+msgstr "المتبقي"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Look up"
+msgstr "بحث"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Look up one user to see what they have now: their counters, their switches and which plans give them. You can also give them a plan for free."
+msgstr "ابحث عن مستخدم لترى ما لديه الآن: أرصدته وميزات التشغيل والإيقاف التي لديه والباقات التي تمنحها له. ويمكنك أيضًا منحه باقة مجانًا."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "No date"
+msgstr "بلا تاريخ"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "No end"
+msgstr "بلا نهاية"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "No one-time plans on sale to give."
+msgstr "لا توجد باقات لمرة واحدة معروضة للبيع لمنحها."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "None"
+msgstr "لا يوجد"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Of"
+msgstr "من"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Only one-time plans on sale are listed. The user gets everything in the plan you choose. For example: %{plan_name}."
+msgstr "تظهر هنا فقط الباقات لمرة واحدة المعروضة للبيع. يحصل المستخدم على كل ما في الباقة التي تختارها. مثال: %{plan_name}."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paste the user's id from your app. It is a long code with dashes. Spaces around it are ignored."
+msgstr "الصق المعرّف الخاص بالمستخدم من تطبيقك. هو رمز طويل فيه شرطات. المسافات حوله تُهمل."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Plan"
+msgstr "الباقة"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Purchase"
+msgstr "عملية شراء"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Reason"
+msgstr "السبب"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Refills or expires"
+msgstr "التجديد أو الانتهاء"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Required. Say why you are giving this plan, so anyone can understand it later."
+msgstr "مطلوب. اكتب سبب منح هذه الباقة ليفهمه أي شخص لاحقًا."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Since"
+msgstr "منذ"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Source"
+msgstr "المصدر"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Subscription"
+msgstr "اشتراك"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Switches on"
+msgstr "ميزات التشغيل المفعّلة"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "That isn't a valid user id."
+msgstr "المعرّف غير صالح."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "The plans that give this user their features. Source tells you how they got it: a subscription, a purchase, or the default plan everyone has."
+msgstr "الباقات التي تمنح هذا المستخدم ميزاته. المصدر يبيّن كيف حصل عليها: اشتراك، أو عملية شراء، أو الباقة الافتراضية التي يملكها الجميع."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Unknown plan"
+msgstr "باقة غير معروفة"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Unlimited"
+msgstr "غير محدود"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Until"
+msgstr "حتى"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "User id"
+msgstr "معرّف المستخدم"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Users"
+msgstr "المستخدمون"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Write why you are giving this plan."
+msgstr "اكتب سبب منح هذه الباقة."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "You don't have access."
+msgstr "ليس لديك صلاحية الوصول."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Find a user"
+msgstr "ابحث عن مستخدم"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "No user found for %{query}."
+msgstr "لا يوجد مستخدم يطابق %{query}."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paste the user's id, or type what your app lets you search by, such as a phone number or an email. Spaces around it are ignored."
+msgstr "الصق معرّف المستخدم، أو اكتب ما يتيح تطبيقك البحث به، مثل رقم الهاتف أو البريد الإلكتروني. المسافات حوله تُهمل."
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Several users match. Choose one."
+msgstr "يطابق البحث أكثر من مستخدم. اختر واحدًا."

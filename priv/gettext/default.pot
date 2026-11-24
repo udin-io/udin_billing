@@ -1,0 +1,212 @@
+## This file is a PO Template file.
+##
+## "msgid"s here are often extracted from source code.
+## Add new messages manually only if they're dynamic
+## messages that can't be statically extracted.
+##
+## Run "mix gettext.extract" to bring this file up to
+## date. Leave "msgstr"s empty as changing them here has no
+## effect: edit them in PO (.po) files instead.
+#
+msgid ""
+msgstr ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "%{count} day"
+msgid_plural "%{count} days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "%{count} month"
+msgid_plural "%{count} months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "%{count} week"
+msgid_plural "%{count} weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "%{count} year"
+msgid_plural "%{count} years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "/ %{period}"
+msgstr ""
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Billing"
+msgstr ""
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Billing sections"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Catalog"
+msgstr ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "Counters reset every %{period}."
+msgstr ""
+
+#: lib/udin_billing/web/auth.ex
+#, elixir-autogen, elixir-format
+msgid "Developer pages are turned off here."
+msgstr ""
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Features"
+msgstr ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "Free"
+msgstr ""
+
+#: lib/udin_billing/web/components.ex
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Included"
+msgstr ""
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Language"
+msgstr ""
+
+#: lib/udin_billing/web/components.ex
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Not included"
+msgstr ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "Nothing included yet."
+msgstr ""
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Optional. Fill every language or none."
+msgstr ""
+
+#: lib/udin_billing/web/components.ex
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Payments"
+msgstr ""
+
+#: lib/udin_billing/web/components.ex
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Plans"
+msgstr ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "Price not set"
+msgstr ""
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Required"
+msgstr ""
+
+#: lib/udin_billing/web/examples.ex
+#, elixir-autogen, elixir-format
+msgid "Standard"
+msgstr ""
+
+#: lib/udin_billing/web/auth.ex
+#, elixir-autogen, elixir-format
+msgid "The billing dashboard is turned off."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "Unlimited"
+msgstr ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "Untitled plan"
+msgstr ""
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Users"
+msgstr ""
+
+#: lib/udin_billing/web/components.ex
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Webhooks"
+msgstr ""
+
+#: lib/udin_billing/web/auth.ex
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "You don't have access to billing."
+msgstr ""
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "missing"
+msgstr ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "never expires"
+msgstr ""
+
+#: lib/udin_billing/web/examples.ex
+#, elixir-autogen, elixir-format
+msgid "units"
+msgstr ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "valid %{period}"
+msgstr ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgctxt "one unit of time"
+msgid "day"
+msgstr ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgctxt "one unit of time"
+msgid "month"
+msgstr ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgctxt "one unit of time"
+msgid "week"
+msgstr ""
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgctxt "one unit of time"
+msgid "year"
+msgstr ""

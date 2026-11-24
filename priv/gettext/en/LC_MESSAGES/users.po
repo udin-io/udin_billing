@@ -1,0 +1,247 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "%{date} UTC"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "A counter is a number of units the user can spend. Left is what they can still use. Of is how many they got. The last column shows when the units refill or expire."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "A gift adds a one-time plan to this user for free. No payment is taken. It is saved as a purchase of 0 with your name and the reason, and you can't undo it here."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "A switch is a feature that is simply on or off for this user."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Choose a plan."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Counters"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Default plan"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Developer tools are turned off here."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Feature"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: a sorry for a service problem"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Gave %{code} to this user."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Give a plan"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Give plan"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Give this plan for free?"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Granted by"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Left"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Look up"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Look up one user to see what they have now: their counters, their switches and which plans give them. You can also give them a plan for free."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "No date"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "No end"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "No one-time plans on sale to give."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "None"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Of"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Only one-time plans on sale are listed. The user gets everything in the plan you choose. For example: %{plan_name}."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paste the user's id from your app. It is a long code with dashes. Spaces around it are ignored."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Plan"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Purchase"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Reason"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Refills or expires"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Required. Say why you are giving this plan, so anyone can understand it later."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Since"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Source"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Subscription"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Switches on"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "That isn't a valid user id."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "The plans that give this user their features. Source tells you how they got it: a subscription, a purchase, or the default plan everyone has."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Unknown plan"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Unlimited"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Until"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "User id"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Users"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Write why you are giving this plan."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "You don't have access."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Find a user"
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "No user found for %{query}."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paste the user's id, or type what your app lets you search by, such as a phone number or an email. Spaces around it are ignored."
+msgstr ""
+
+#: lib/udin_billing/web/users_live.ex
+#, elixir-autogen, elixir-format
+msgid "Several users match. Choose one."
+msgstr ""

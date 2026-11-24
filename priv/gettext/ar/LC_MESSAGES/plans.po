@@ -1,0 +1,237 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "%{code} is off sale."
+msgstr "الباقة %{code} موقوفة عن البيع."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "%{code} is on sale."
+msgstr "الباقة %{code} معروضة للبيع."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Buyers pay again every billing period until they cancel."
+msgstr "يدفع المشتري من جديد في كل مدة اشتراك إلى أن يلغي الاشتراك."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Buyers pay once and get access for a fixed time or a fixed number of units."
+msgstr "يدفع المشتري مرة واحدة ويحصل على الباقة لمدة محددة أو على عدد محدد من الوحدات."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Cards"
+msgstr "بطاقات"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Cards show one box for each plan. Compare puts all plans in one table, so you can see which plan has which feature."
+msgstr "البطاقات تعرض مربعًا واحدًا لكل باقة. المقارنة تجمع كل الباقات في جدول واحد لترى أي باقة فيها أي ميزة."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Compare"
+msgstr "مقارنة"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Costs nothing. Users get it without paying."
+msgstr "بلا مقابل. يحصل عليها المستخدمون دون دفع."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Couldn't change the plan: %{reason}"
+msgstr "تعذّر تغيير الباقة: %{reason}"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Created %{created}, updated %{updated}"
+msgstr "أُنشئت في %{created} وعُدّلت في %{updated}"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Default"
+msgstr "افتراضية"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Default: the free plan every new user starts on."
+msgstr "افتراضية: هي الباقة المجانية التي يبدأ بها كل مستخدم جديد."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Duplicate"
+msgstr "نسخ"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Duplicate: make a copy to start from, for example a yearly plan from a monthly one."
+msgstr "نسخ: ينشئ نسخة تبدأ منها، مثل باقة سنوية من باقة شهرية."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Each row is a feature and each column is a plan. A check mark means included. A number is how many units the plan gives. Unlimited means no limit. A cross means not included."
+msgstr "كل صف هو ميزة وكل عمود هو باقة. علامة الصح تعني أن الميزة مضمّنة. الرقم هو عدد الوحدات التي تعطيها الباقة. غير محدود يعني بلا حد. علامة الخطأ تعني أنها غير مضمّنة."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Edit"
+msgstr "تعديل"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Edit: change the plan's texts, price or features."
+msgstr "تعديل: يغيّر نصوص الباقة أو سعرها أو ميزاتها."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Feature"
+msgstr "الميزة"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: Compare shows at a glance which plans include %{feature}."
+msgstr "مثال: تُظهر المقارنة بنظرة واحدة أي الباقات تشمل %{feature}."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: choose Arabic to check that the plan %{plan_name} reads well for Arabic buyers."
+msgstr "مثال: اختر العربية لتتأكد أن الباقة %{plan_name} تبدو جيدة للمشترين بالعربية."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Free plan"
+msgstr "باقة مجانية"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Has buyers"
+msgstr "لها مشترون"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Has buyers: someone already bought it, so its price and period can't change."
+msgstr "لها مشترون: اشتراها أحد بالفعل، فلا يمكن تغيير سعرها ولا مدتها."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Ids at the payment provider"
+msgstr "المعرّفات عند مزوّد الدفع"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Missing %{languages}"
+msgstr "ناقص: %{languages}"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Missing: the name or text is not written in that language yet."
+msgstr "ناقص: الاسم أو النص لم يُكتب بهذه اللغة بعد."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "New plan"
+msgstr "باقة جديدة"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "New version"
+msgstr "نسخة جديدة"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "New version: for a plan that has buyers. It opens a copy where you can set the new price, then you take the old plan off sale."
+msgstr "نسخة جديدة: للباقة التي لها مشترون. تفتح نسخة منها لتحدد السعر الجديد، ثم توقف الباقة القديمة عن البيع."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "No plans yet. Create the first one."
+msgstr "لا توجد باقات بعد. أنشئ أول باقة."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Off sale"
+msgstr "موقوفة عن البيع"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Off sale: nobody can buy this plan now. Current buyers keep it."
+msgstr "موقوفة عن البيع: لا يستطيع أحد شراء هذه الباقة الآن. المشترون الحاليون يحتفظون بها."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "One-time plans"
+msgstr "باقات لمرة واحدة"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Preview language"
+msgstr "لغة المعاينة"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Put on sale"
+msgstr "عرض للبيع"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Recommended"
+msgstr "موصى بها"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Recommended: the plan buyers are pointed to first."
+msgstr "موصى بها: هي الباقة التي يُوجَّه إليها المشترون أولًا."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "See every plan with its price, what it includes and whether it is on sale. Open a plan to change it, or start a new one."
+msgstr "شاهد كل باقة مع سعرها وما تشمله وهل هي معروضة للبيع. افتح باقة لتعديلها أو ابدأ باقة جديدة."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Shows how buyers in that language see the cards. It does not change the language of this dashboard."
+msgstr "تعرض كيف يرى المشترون بهذه اللغة البطاقات. لا تغيّر لغة هذه اللوحة."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Subscription plans"
+msgstr "باقات الاشتراك"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Take off sale"
+msgstr "إيقاف البيع"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Take off sale: stops new buyers. Current buyers keep what they bought. You can put the plan back on sale at any time."
+msgstr "إيقاف البيع: يمنع المشترين الجدد. المشترون الحاليون يحتفظون بما اشتروه. يمكنك إعادة الباقة للبيع في أي وقت."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Take this plan off sale? Nobody can buy it anymore. Current buyers keep it until their paid period ends. You can put it back on sale later."
+msgstr "هل تريد إيقاف بيع هذه الباقة؟ لن يستطيع أحد شراءها. المشترون الحاليون يحتفظون بها حتى تنتهي مدتهم المدفوعة. يمكنك إعادتها للبيع لاحقًا."
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "View"
+msgstr "العرض"
+
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "What do the labels and buttons mean?"
+msgstr "ماذا تعني العلامات والأزرار؟"

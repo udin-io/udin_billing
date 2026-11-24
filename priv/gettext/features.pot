@@ -1,0 +1,252 @@
+## This file is a PO Template file.
+##
+## "msgid"s here are often extracted from source code.
+## Add new messages manually only if they're dynamic
+## messages that can't be statically extracted.
+##
+## Run "mix gettext.extract" to bring this file up to
+## date. Leave "msgstr"s empty as changing them here has no
+## effect: edit them in PO (.po) files instead.
+#
+msgid ""
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "A name that is not filled in shows as"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "A number that sets the order in lists. Lower numbers come first. For example: 1 shows before 2."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "A switch is on or off. A counter is a number of units that refill, for example %{amount} %{feature} each month. This can't change after you save."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Actions"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Add a feature here first, then include it in a plan."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Add feature"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Cancel"
+msgstr ""
+
+#: lib/udin_billing/web/feature_form.ex
+#, elixir-autogen, elixir-format
+msgid "Choose a switch or a counter."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Couldn't delete %{key}: %{message}"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Counter"
+msgstr ""
+
+#: lib/udin_billing/web/feature_form.ex
+#, elixir-autogen, elixir-format
+msgid "Counter (a number of units)"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Delete"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Delete %{key}? This can't be undone. Your app's code may still use it."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Delete removes the feature from this list only. It can't be undone, and it does not change your app's code. A feature can only be deleted when no plan includes it."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Deleted %{key}."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Description"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Display order"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Edit"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Edit %{key}"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Features"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Features are what your plans can give a buyer. A feature is either a switch (on or off) or a counter (a number of units that refill)."
+msgstr ""
+
+#: lib/udin_billing/web/feature_form.ex
+#, elixir-autogen, elixir-format
+msgid "Fill in every language, or leave them all empty."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Included in"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Key"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Kind"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Lowercase letters, numbers and underscores. Your app's code uses it, and it can't change after you save. For example: %{feature_key}"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Name"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "New feature"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "No features yet. Add the switches and counters your plans will include."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "No plans"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Save changes"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Saved %{key}."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Saving…"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Switch"
+msgstr ""
+
+#: lib/udin_billing/web/feature_form.ex
+#, elixir-autogen, elixir-format
+msgid "Switch (on or off)"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "That feature doesn't exist."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "That feature no longer exists."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "The description is one short sentence that says what the feature gives. For example: %{amount} %{feature} to use each month."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "The kind can't be changed, because plans already depend on it."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "The name is what buyers see in each language. For example: %{feature}."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "These languages are required: %{languages}."
+msgstr ""
+
+#: lib/udin_billing/web/feature_form.ex
+#, elixir-autogen, elixir-format
+msgid "This is required."
+msgstr ""
+
+#: lib/udin_billing/web/feature_form.ex
+#, elixir-autogen, elixir-format
+msgid "This is required. Use lowercase letters, numbers and underscores, and start with a letter."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Used by code"
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Used by code means your app's code checks this feature, so it can't be deleted."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "You don't have access."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "Your app's code uses this key, so it can't be changed. To use another key, add a new feature."
+msgstr ""
+
+#: lib/udin_billing/web/features_live.ex
+#, elixir-autogen, elixir-format
+msgid "missing"
+msgstr ""
