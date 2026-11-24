@@ -1,0 +1,234 @@
+## This file is a PO Template file.
+##
+## "msgid"s here are often extracted from source code.
+## Add new messages manually only if they're dynamic
+## messages that can't be statically extracted.
+##
+## Run "mix gettext.extract" to bring this file up to
+## date. Leave "msgstr"s empty as changing them here has no
+## effect: edit them in PO (.po) files instead.
+#
+msgid ""
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "%{place} is missing, or its value is not allowed."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "%{place} must be a price written in quotes, like \"150.00\"."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "%{place} must be an object, written with curly braces."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "%{place} must give a product id, or a list of ids, for each payment provider."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "%{place} must have one text for each language."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Apply changes"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Apply changes the real plans and features of this environment, and buyers can see them. It is all or nothing: if one change fails, nothing is saved. It can't be undone with one click."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Apply these changes to this environment? It can't be undone with one click."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Catalog applied: %{count} change."
+msgid_plural "Catalog applied: %{count} changes."
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Catalog file (JSON)"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Change"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Couldn't export: %{reason}"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Create adds something new. Update changes something that already exists here."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Export"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Exported catalog file"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Feature %{key} is a %{current} here and can't become a %{wanted}."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Feature %{key} is needed by the app's code, but it is in neither the file nor this environment."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Fields"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: this environment has the plan %{plan_code} and one more plan, and the file only has %{plan_code}. With this on, the other plan goes off sale."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Import"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "In this environment but not in the file: %{plans}. They are kept as they are."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "In this environment but not in the file: %{plans}. They will be taken off sale."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Item"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Leave this off if you only want to add or update plans. Turn it on only when the file is the complete list of plans you want on sale here."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Nothing can be applied until these are fixed:"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Or make the file with this command:"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paste a catalog file from another environment, preview what changes here, then apply it."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Paste the whole file. It is the text from the Export box of the other environment. For example: a file with the plan %{plan_code} adds that plan here if it is new, or updates it if it exists."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Plans and features are matched by plan code and feature key. Nothing is ever deleted."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Preview changes"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Preview is a dry run. It checks the file and shows what would change, but it saves nothing."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Set up features and plans once, then move them to another environment as one file, for example from staging to production, instead of entering them again."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "Take plans that aren't in the file off sale (buyers keep them)"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "The file is not valid JSON: %{detail}"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "This catalog file version %{version} is not supported. The supported version is %{supported}."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "This environment already matches the file."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "This environment's features and plans. Copy this text and paste it into the Import box of another environment."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "This is not a billing catalog file. It must contain \"format\": \"%{format}\"."
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "To keep it with your code, save it as this file and commit it:"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "What will change"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "create"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "feature"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "plan"
+msgstr ""
+
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "update"
+msgstr ""

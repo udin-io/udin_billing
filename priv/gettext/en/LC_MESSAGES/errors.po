@@ -1,0 +1,177 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "%{kind} plans are disabled, enabled: %{modes}"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "%{provider} product %{id} is already used by plan %{code}"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "a plan still uses this feature. Remove it from plans first"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "billing period length"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "billing period unit"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "currency"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "currency must be an uppercase ISO 4217 code, e.g. EGP"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "currency must be one of %{list}"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "enter a whole number above 0"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "free plans must cost 0"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "has already been taken"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "is invalid"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "is required"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "missing text for %{langs}"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "must be higher than the price"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "must be less than or equal to %{max}"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "must be more than or equal to %{min}"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "not enough units left"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "only a free plan can be the default"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "paid amount doesn't match the price"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "paid plans must have a price"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "plan type"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "price"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "recurring plans need a billing period"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "refill length"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "refill unit"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "the app's code uses this feature, so it can't be deleted"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "the refill can't be longer than the billing period"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "this plan has buyers, so %{terms} can't change: create a new version and take this one off sale"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "unknown feature, add it to the feature catalog first"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "unknown language %{lang}, configured: %{langs}"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "use lowercase letters, digits and underscores, starting with a letter"
+msgstr ""
+
+#: lib/udin_billing/web/error_text.ex
+#, elixir-autogen, elixir-format
+msgid "user not found"
+msgstr ""

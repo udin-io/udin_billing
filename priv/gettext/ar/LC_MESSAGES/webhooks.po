@@ -1,0 +1,224 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Actions"
+msgstr "الإجراءات"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Applies the message again."
+msgstr "تطبّق الرسالة مرة أخرى."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Apply this message again? It can change payments and access, so read the error first. A message that was already applied is not applied twice."
+msgstr "هل تريد تطبيق هذه الرسالة مرة أخرى؟ قد تغيّر المدفوعات والصلاحيات، فاقرأ الخطأ أولًا. الرسالة التي طُبّقت من قبل لا تُطبّق مرتين."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Couldn't load messages: %{reason}"
+msgstr "تعذّر تحميل الرسائل: %{reason}"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Customer changed"
+msgstr "تغيّرت بيانات العميل"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Details"
+msgstr "التفاصيل"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Details: the error if there was one, and the saved message exactly as the provider sent it."
+msgstr "التفاصيل: الخطأ إن وُجد، والرسالة المحفوظة كما أرسلها مزوّد الدفع تمامًا."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: a payment arrives for a plan the app does not know. Add the provider id to the plan %{plan_code}, then replay the message."
+msgstr "مثال: وصلت عملية دفع لباقة لا يعرفها التطبيق. أضف معرّف مزوّد الدفع إلى الباقة %{plan_code} ثم أعد تطبيق الرسالة."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "No %{status} messages."
+msgstr "لا توجد رسائل %{status}."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Nothing changed. This message was already applied before."
+msgstr "لم يتغيّر شيء. هذه الرسالة طُبّقت من قبل."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Other"
+msgstr "أخرى"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Payment failed"
+msgstr "فشلت عملية الدفع"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Payment providers send a message each time something happens, such as a payment or a refund. Check here that each message was applied, and fix the ones that were not."
+msgstr "يرسل مزوّد الدفع رسالة كلما حدث شيء، مثل عملية دفع أو استرداد. تأكد هنا أن كل رسالة طُبّقت، وأصلح التي لم تُطبّق."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Payment succeeded"
+msgstr "نجحت عملية الدفع"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Provider"
+msgstr "المزوّد"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Received"
+msgstr "وقت الاستلام"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Reference"
+msgstr "المرجع"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Reference: the purchase or customer the message is about, as the provider names it."
+msgstr "المرجع: عملية الشراء أو العميل الذي تخصه الرسالة، كما يسميه مزوّد الدفع."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Refunded"
+msgstr "تم الاسترداد"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Replay"
+msgstr "إعادة التطبيق"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Replay failed: %{reason}"
+msgstr "فشلت إعادة التطبيق: %{reason}"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Replay: applies the saved message again, as if the provider had just sent it. Use it after you fix the cause. A message that was already applied is never applied twice."
+msgstr "إعادة التطبيق: تطبّق الرسالة المحفوظة مرة أخرى كأن مزوّد الدفع أرسلها الآن. استخدمها بعد إصلاح السبب. الرسالة التي طُبّقت من قبل لا تُطبّق مرتين أبدًا."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Replayed, but it still can't be applied. Read the error and fix its cause first."
+msgstr "أُعيد التطبيق لكن الرسالة ما زالت لا تُطبّق. اقرأ الخطأ وأصلح سببه أولًا."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Replayed. The message was applied."
+msgstr "تمت إعادة التطبيق. طُبّقت الرسالة."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Replayed. The message was skipped on purpose."
+msgstr "تمت إعادة التطبيق. تم تجاهل الرسالة عمدًا."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Replayed: %{outcome}."
+msgstr "تمت إعادة التطبيق: %{outcome}."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Saved message, tried %{count} time"
+msgid_plural "Saved message, tried %{count} times"
+msgstr[0] "الرسالة المحفوظة (عدد المحاولات: %{count})"
+msgstr[1] "الرسالة المحفوظة (عدد المحاولات: %{count})"
+msgstr[2] "الرسالة المحفوظة (عدد المحاولات: %{count})"
+msgstr[3] "الرسالة المحفوظة (عدد المحاولات: %{count})"
+msgstr[4] "الرسالة المحفوظة (عدد المحاولات: %{count})"
+msgstr[5] "الرسالة المحفوظة (عدد المحاولات: %{count})"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Showing the newest %{count} message."
+msgid_plural "Showing the newest %{count} messages."
+msgstr[0] "عرض أحدث %{count} رسالة."
+msgstr[1] "عرض أحدث %{count} رسالة."
+msgstr[2] "عرض أحدث %{count} رسالة."
+msgstr[3] "عرض أحدث %{count} رسالة."
+msgstr[4] "عرض أحدث %{count} رسالة."
+msgstr[5] "عرض أحدث %{count} رسالة."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Status"
+msgstr "الحالة"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "The message arrived but could not be applied, for example a payment for an unknown purchase or with a wrong amount. A person needs to look at it."
+msgstr "وصلت الرسالة لكن لم يمكن تطبيقها، مثل دفع لعملية شراء غير معروفة أو بمبلغ خاطئ. يجب أن يراجعها شخص."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "The message arrived but was not finished. It may still be waiting, or it stopped halfway. You can replay it."
+msgstr "وصلت الرسالة لكنها لم تكتمل. قد تكون ما زالت تنتظر أو توقفت في منتصف الطريق. يمكنك إعادة تطبيقها."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "The message is about something this app does not use, so it was skipped on purpose. There is nothing to do."
+msgstr "الرسالة عن شيء لا يستخدمه هذا التطبيق، لذلك تم تجاهلها عمدًا. لا يلزمك فعل شيء."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "The message was applied. There is nothing to do."
+msgstr "طُبّقت الرسالة. لا يلزمك فعل شيء."
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Type"
+msgstr "النوع"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "What do the statuses and columns mean?"
+msgstr "ماذا تعني الحالات والأعمدة؟"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "failed"
+msgstr "فاشلة"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "ignored"
+msgstr "متجاهلة"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "none"
+msgstr "لا يوجد"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "processed"
+msgstr "مطبّقة"
+
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "received"
+msgstr "مستلمة"

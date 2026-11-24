@@ -1,0 +1,598 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "%{feature} amount"
+msgstr "كمية %{feature}"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "%{feature} limit"
+msgstr "حد %{feature}"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "A short id: lowercase letters, numbers and dashes. It can't change later."
+msgstr "معرّف قصير من حروف إنجليزية صغيرة وأرقام وشرطات. لا يمكن تغييره لاحقًا."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "A whole number. The lower the number, the earlier buyers see the plan."
+msgstr "رقم صحيح. كلما قلّ الرقم ظهرت الباقة للمشترين في وقت أبكر."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Add a feature"
+msgstr "إضافة ميزة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Adds a star to the plan so buyers notice it. It does not change the price or what is included."
+msgstr "يضيف نجمة إلى الباقة ليلاحظها المشترون. لا يغيّر السعر ولا ما تشمله."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "After a subscription ends"
+msgstr "بعد انتهاء الاشتراك"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Anything not turned on here is off for this plan. What it includes can't change once the plan has buyers."
+msgstr "أي شيء غير مفعّل هنا يكون موقوفًا في هذه الباقة. لا يمكن تغيير ما تشمله بعد أن يشتريها أحد."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Back to plans"
+msgstr "رجوع إلى الباقات"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Billing period"
+msgstr "مدة الاشتراك"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Changes apply to new buyers. People who already bought this plan keep what they paid for."
+msgstr "التغييرات تسري على المشترين الجدد. من اشترى هذه الباقة من قبل يحتفظ بما دفع ثمنه."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Code"
+msgstr "المعرّف"
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "Continue where they left off"
+msgstr "المتابعة من حيث توقفوا"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Copy the id exactly as it appears at the provider. A wrong id means purchases won't match this plan. Leave it empty if you don't sell this plan there."
+msgstr "انسخ المعرّف كما يظهر تمامًا عند المزوّد. المعرّف الخاطئ يعني أن عمليات الشراء لن تطابق هذه الباقة. اتركه فارغًا إذا كنت لا تبيع هذه الباقة هناك."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Counter"
+msgstr "رصيد"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Counter reset"
+msgstr "تجديد الرصيد"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Create new version"
+msgstr "إنشاء نسخة جديدة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Create plan"
+msgstr "إنشاء باقة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Created %{new}. %{old} is off sale."
+msgstr "تم إنشاء %{new}. الباقة %{old} موقوفة عن البيع."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Currency"
+msgstr "العملة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Default plan (everyone has it without buying)"
+msgstr "الباقة الافتراضية (يحصل عليها الجميع دون شراء)"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Description"
+msgstr "نبذة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Design one plan here: its name, price, how long it lasts and what it includes. The preview shows what buyers will see."
+msgstr "صمّم باقة واحدة هنا: اسمها وسعرها ومدتها وما تشمله. المعاينة تعرض ما سيراه المشترون."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Display order"
+msgstr "ترتيب العرض"
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "Each time a subscription ends, the user gets a new free allowance. A one-time allowance is given again, and a monthly one starts a new month that day. This is friendlier when users move between paid and free often."
+msgstr "في كل مرة ينتهي فيها اشتراك، يحصل المستخدم على رصيد مجاني جديد. الرصيد الذي يُعطى مرة واحدة يُعطى من جديد، والشهري يبدأ شهرًا جديدًا في ذلك اليوم. هذا أنسب إذا كان المستخدمون ينتقلون كثيرًا بين المدفوع والمجاني."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Edit plan"
+msgstr "تعديل الباقة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Every user gets this plan automatically. Only one free plan should be the default."
+msgstr "يحصل كل مستخدم على هذه الباقة تلقائيًا. يجب أن تكون باقة مجانية واحدة فقط هي الافتراضية."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Fill it only during a sale. It shows crossed out next to the price. Buyers still pay the price. It must be higher than the price."
+msgstr "املأه فقط أثناء التخفيض. يظهر مشطوبًا بجانب السعر. يظل المشترون يدفعون السعر. ويجب أن يكون أعلى من السعر."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Fix the highlighted fields to save."
+msgstr "صحّح الحقول المظللة لتتمكن من الحفظ."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Fixed once created. Your app and payment providers refer to it."
+msgstr "لا يتغير بعد الإنشاء. تطبيقك ومزوّدو الدفع يشيرون إليه."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: %{amount} %{feature}"
+msgstr "مثال: %{amount} %{feature}"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: %{id}"
+msgstr "مثال: %{id}"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: %{plan_code}"
+msgstr "مثال: %{plan_code}"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: %{plan_name}"
+msgstr "مثال: %{plan_name}"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: %{price} means buyers pay %{price} %{currency}."
+msgstr "مثال: الرقم %{price} يعني أن المشترين يدفعون %{price} %{currency}."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: 1 month charges every month. 1 year charges once a year."
+msgstr "مثال: شهر واحد يعني الدفع كل شهر. سنة واحدة تعني الدفع مرة كل سنة."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: 7 days or 1 month after paying."
+msgstr "مثال: 7 أيام أو شهر واحد بعد الدفع."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: a plan with 1 shows before a plan with 2."
+msgstr "مثال: الباقة التي رقمها 1 تظهر قبل الباقة التي رقمها 2."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: a user used all %{amount} free %{feature}, subscribed, then cancelled. With the first choice they get no new free %{feature}. With the second they get %{amount} again."
+msgstr "مثال: مستخدم استهلك كل %{amount} %{feature} المجانية، ثم اشترك، ثم ألغى. مع الاختيار الأول لا يحصل على %{feature} مجانية جديدة. ومع الثاني يحصل على %{amount} من جديد."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: choose %{currency} if the price is %{price} %{currency}."
+msgstr "مثال: اختر %{currency} إذا كان السعر %{price} %{currency}."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: choose a subscription to charge %{price} %{currency} again every month."
+msgstr "مثال: اختر باقة اشتراك لتحصيل %{price} %{currency} من جديد كل شهر."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: choose never ends for a plan that is always free."
+msgstr "مثال: اختر بلا نهاية لباقة تبقى مجانية دائمًا."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: price %{price} and original price %{original}."
+msgstr "مثال: السعر %{price} والسعر الأصلي %{original}."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: reset every 1 month, so each month buyers get %{amount} %{feature} again."
+msgstr "مثال: التجديد كل شهر واحد، فيحصل المشترون كل شهر على %{amount} %{feature} من جديد."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: the starter plan that new users have before they buy %{plan_name}."
+msgstr "مثال: باقة البداية التي يملكها المستخدمون الجدد قبل أن يشتروا %{plan_name}."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: turn off %{plan_name} when you stop offering it."
+msgstr "مثال: أوقف %{plan_name} عندما تتوقف عن عرضها."
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "Free plan"
+msgstr "باقة مجانية"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Free plans cost nothing. A one-time plan is paid once. A subscription charges again every period. The type can't change once the plan has buyers."
+msgstr "الباقة المجانية لا تكلّف شيئًا. باقة المرة الواحدة تُدفع مرة واحدة. الاشتراك يُحصَّل من جديد في كل مدة. لا يمكن تغيير النوع بعد أن يشتري الباقة أحد."
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "Free units they used before subscribing stay used. A one-time free allowance is never given again. A monthly one carries on with its current month. This stops people from collecting free units by subscribing and cancelling."
+msgstr "الوحدات المجانية التي استهلكوها قبل الاشتراك تبقى مستهلكة. الرصيد المجاني الذي يُعطى مرة واحدة لا يُعطى مرة أخرى. والرصيد الشهري يكمل شهره الحالي. هذا يمنع جمع وحدات مجانية بالاشتراك ثم الإلغاء."
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "Fresh start"
+msgstr "بداية جديدة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Highlight as recommended"
+msgstr "تمييزها كباقة موصى بها"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "How long a buyer can use it after paying. It can't change once the plan has buyers."
+msgstr "المدة التي يستطيع المشتري استخدامها بعد الدفع. لا يمكن تغييرها بعد أن يشتري الباقة أحد."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "How long it lasts"
+msgstr "مدة الصلاحية"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "How many"
+msgstr "كم"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "How often the subscription renews and charges. Access lasts until the paid period ends. It can't change once the plan has buyers."
+msgstr "كم مرة يتجدد الاشتراك ويُحصَّل المبلغ. يستمر الوصول حتى تنتهي المدة المدفوعة. لا يمكن تغييرها بعد أن يشتري الباقة أحد."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Its price, type, periods and what it includes are locked. To change them, create a new version. It starts as a copy, and saving it takes this plan off sale. Current buyers keep this plan until their paid period ends."
+msgstr "سعرها ونوعها ومدتها وما تشمله مقفلة. لتغييرها أنشئ نسخة جديدة. تبدأ النسخة كنسخة مطابقة، وعند حفظها توقف هذه الباقة عن البيع. يحتفظ المشترون الحاليون بهذه الباقة حتى تنتهي مدتهم المدفوعة."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Lasts"
+msgstr "تستمر"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Limited"
+msgstr "محدود"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Manage features"
+msgstr "إدارة الميزات"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Name"
+msgstr "الاسم"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Name and description"
+msgstr "الاسم والنبذة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Never ends"
+msgstr "بلا نهاية"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Never resets (given once)"
+msgstr "لا يتجدد (يُعطى مرة واحدة)"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "New plan"
+msgstr "باقة جديدة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "New version of %{code}"
+msgstr "نسخة جديدة من %{code}"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "New version of %{code}."
+msgstr "نسخة جديدة من %{code}."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "No features yet. Add switches and counters first."
+msgstr "لا توجد ميزات بعد. أضف ميزات التشغيل والإيقاف والأرصدة أولًا."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Not included, a set number of units, or unlimited. Limited needs a whole number above 0."
+msgstr "غير مشمولة، أو عدد محدد من الوحدات، أو غير محدودة. الخيار المحدود يحتاج رقمًا صحيحًا أكبر من 0."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Numbers only. Use a dot for decimals. It can't change once the plan has buyers."
+msgstr "أرقام فقط. استخدم النقطة للكسور. لا يمكن تغييره بعد أن يشتري الباقة أحد."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "On sale"
+msgstr "معروضة للبيع"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "One short line that says who the plan is for. You can leave it empty."
+msgstr "سطر قصير يوضح لمن هذه الباقة. يمكنك تركه فارغًا."
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "One-time plan"
+msgstr "باقة لمرة واحدة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Original price (optional)"
+msgstr "السعر الأصلي (اختياري)"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Payment provider products"
+msgstr "منتجات مزوّد الدفع"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Plan type"
+msgstr "نوع الباقة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Preview"
+msgstr "معاينة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Preview language"
+msgstr "لغة المعاينة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Price"
+msgstr "السعر"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Recommended"
+msgstr "موصى بها"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Renews every"
+msgstr "يتجدد كل"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Reset every"
+msgstr "يتجدد الرصيد كل"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Save changes"
+msgstr "حفظ التغييرات"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Saved %{code}."
+msgstr "تم حفظ %{code}."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Saving applies right away to new buyers. Nothing is charged by saving."
+msgstr "الحفظ يسري فورًا على المشترين الجدد. لا يتم تحصيل أي مبلغ بسبب الحفظ."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Saving creates this plan and takes %{code} off sale. Its buyers keep it until their paid period ends. Give this version its own payment provider product ids."
+msgstr "الحفظ ينشئ هذه الباقة ويوقف %{code} عن البيع. يحتفظ مشترو %{code} بها حتى تنتهي مدتهم المدفوعة. أعطِ هذه النسخة معرّفات منتجات خاصة بها عند مزوّد الدفع."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Saving…"
+msgstr "جارٍ الحفظ…"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Subscribers don't get the free plan on top of their plan. This decides what they get when they're back on free."
+msgstr "المشتركون لا يحصلون على الباقة المجانية إضافة إلى باقتهم. هذا الاختيار يحدد ما يحصلون عليه عند عودتهم إلى المجانية."
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "Subscription plan"
+msgstr "باقة اشتراك"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Switch"
+msgstr "ميزة تشغيل أو إيقاف"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "That plan doesn't exist."
+msgstr "هذه الباقة غير موجودة."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "The currency of the price. It can't change once the plan has buyers."
+msgstr "عملة السعر. لا يمكن تغييرها بعد أن يشتري الباقة أحد."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "The id each payment provider knows this plan by. Several ids: separate with commas."
+msgstr "المعرّف الذي يعرف به كل مزوّد دفع هذه الباقة. إذا كان هناك أكثر من معرّف فافصل بينها بفاصلة."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "The price buyers pay. Where a payment provider sets its own price, keep it the same."
+msgstr "السعر الذي يدفعه المشترون. إذا كان مزوّد الدفع يحدد سعره بنفسه فاجعله مطابقًا له."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "The title of the plan on the buyer's screen."
+msgstr "عنوان الباقة على شاشة المشتري."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "This is how buyers will see the plan. Switch the language to check each translation. It does not change the language of this page."
+msgstr "هكذا سيرى المشترون الباقة. بدّل اللغة لتراجع كل ترجمة. هذا لا يغيّر لغة هذه الصفحة."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "This plan has buyers."
+msgstr "لهذه الباقة مشترون."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Turn it off to stop selling this plan. Buyers who already have it keep it."
+msgstr "أوقفه لتتوقف عن بيع هذه الباقة. من اشتراها من قبل يحتفظ بها."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Turn it on to give this feature to buyers of this plan."
+msgstr "فعّله لتمنح هذه الميزة لمشتري هذه الباقة."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Type"
+msgstr "النوع"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Unit"
+msgstr "الوحدة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Usually never ends. Counters refill on the reset below."
+msgstr "عادة لا تنتهي. تتجدد الأرصدة وفق التجديد الموضح أدناه."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "What buyers see, in every language your app supports. Fill the same text in each language."
+msgstr "ما يراه المشترون، بكل لغة يدعمها تطبيقك. اكتب النص نفسه بكل لغة."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "What's included"
+msgstr "ما تشمله الباقة"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "When counters (%{names}) refill. A yearly plan can reset monthly. Unused units don't carry over. The refill can't be longer than the billing period."
+msgstr "متى تتجدد الأرصدة (%{names}). يمكن لباقة سنوية أن تجدد الرصيد شهريًا. الوحدات غير المستخدمة لا تنتقل. ولا يمكن أن تكون مدة التجديد أطول من مدة الاشتراك."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "When counters refill. A yearly plan can reset monthly. Unused units don't carry over. The refill can't be longer than the billing period."
+msgstr "متى تتجدد الأرصدة. يمكن لباقة سنوية أن تجدد الرصيد شهريًا. الوحدات غير المستخدمة لا تنتقل. ولا يمكن أن تكون مدة التجديد أطول من مدة الاشتراك."
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "a number like 150 or 99.50"
+msgstr "رقم مثل 150 أو 99.50"
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "a number like 200"
+msgstr "رقم مثل 200"
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "choose a currency"
+msgstr "اختر عملة"
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "choose a type"
+msgstr "اختر نوعًا"
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "day(s)"
+msgstr "يوم أو أيام"
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "enter a number of days, weeks, months or years"
+msgstr "أدخل عددًا من الأيام أو الأسابيع أو الأشهر أو السنوات"
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "enter a whole number above 0"
+msgstr "أدخل رقمًا صحيحًا أكبر من 0"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "fill every language or leave all empty"
+msgstr "املأ كل اللغات أو اتركها كلها فارغة"
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "month(s)"
+msgstr "شهر أو أشهر"
+
+#: lib/udin_billing/web/plan_form.ex
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "required"
+msgstr "مطلوب"
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "week(s)"
+msgstr "أسبوع أو أسابيع"
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "year(s)"
+msgstr "سنة أو سنوات"

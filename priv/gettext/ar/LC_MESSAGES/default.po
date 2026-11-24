@@ -1,0 +1,228 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5);\n"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "%{count} day"
+msgid_plural "%{count} days"
+msgstr[0] "%{count} يوم"
+msgstr[1] "يوم واحد"
+msgstr[2] "يومين"
+msgstr[3] "%{count} أيام"
+msgstr[4] "%{count} يومًا"
+msgstr[5] "%{count} يوم"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "%{count} month"
+msgid_plural "%{count} months"
+msgstr[0] "%{count} شهر"
+msgstr[1] "شهر واحد"
+msgstr[2] "شهرين"
+msgstr[3] "%{count} أشهر"
+msgstr[4] "%{count} شهرًا"
+msgstr[5] "%{count} شهر"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "%{count} week"
+msgid_plural "%{count} weeks"
+msgstr[0] "%{count} أسبوع"
+msgstr[1] "أسبوع واحد"
+msgstr[2] "أسبوعين"
+msgstr[3] "%{count} أسابيع"
+msgstr[4] "%{count} أسبوعًا"
+msgstr[5] "%{count} أسبوع"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "%{count} year"
+msgid_plural "%{count} years"
+msgstr[0] "%{count} سنة"
+msgstr[1] "سنة واحدة"
+msgstr[2] "سنتين"
+msgstr[3] "%{count} سنوات"
+msgstr[4] "%{count} سنة"
+msgstr[5] "%{count} سنة"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "/ %{period}"
+msgstr "/ %{period}"
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Billing"
+msgstr "الفوترة"
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Billing sections"
+msgstr "أقسام الفوترة"
+
+#: lib/udin_billing/web/catalog_live.ex
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Catalog"
+msgstr "الكتالوج"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "Counters reset every %{period}."
+msgstr "يتجدد الرصيد كل %{period}."
+
+#: lib/udin_billing/web/auth.ex
+#, elixir-autogen, elixir-format
+msgid "Developer pages are turned off here."
+msgstr "صفحات المطورين متوقفة هنا."
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Features"
+msgstr "الميزات"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "Free"
+msgstr "مجاني"
+
+#: lib/udin_billing/web/components.ex
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Included"
+msgstr "مضمّن"
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Language"
+msgstr "اللغة"
+
+#: lib/udin_billing/web/components.ex
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Not included"
+msgstr "غير مضمّن"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "Nothing included yet."
+msgstr "لا يشمل شيئًا بعد."
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Optional. Fill every language or none."
+msgstr "اختياري. اكتب كل اللغات أو اتركها كلها فارغة."
+
+#: lib/udin_billing/web/components.ex
+#: lib/udin_billing/web/payments_live.ex
+#, elixir-autogen, elixir-format
+msgid "Payments"
+msgstr "المدفوعات"
+
+#: lib/udin_billing/web/components.ex
+#: lib/udin_billing/web/plans_live.ex
+#, elixir-autogen, elixir-format
+msgid "Plans"
+msgstr "الباقات"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "Price not set"
+msgstr "السعر غير محدد"
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Required"
+msgstr "مطلوب"
+
+#: lib/udin_billing/web/examples.ex
+#, elixir-autogen, elixir-format
+msgid "Standard"
+msgstr "قياسية"
+
+#: lib/udin_billing/web/auth.ex
+#, elixir-autogen, elixir-format
+msgid "The billing dashboard is turned off."
+msgstr "لوحة الفوترة متوقفة."
+
+#: lib/udin_billing/web/plan_form_live.ex
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "Unlimited"
+msgstr "غير محدود"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "Untitled plan"
+msgstr "باقة بدون اسم"
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "Users"
+msgstr "المستخدمون"
+
+#: lib/udin_billing/web/components.ex
+#: lib/udin_billing/web/webhooks_live.ex
+#, elixir-autogen, elixir-format
+msgid "Webhooks"
+msgstr "رسائل مزوّد الدفع"
+
+#: lib/udin_billing/web/auth.ex
+#: lib/udin_billing/web/catalog_live.ex
+#, elixir-autogen, elixir-format
+msgid "You don't have access to billing."
+msgstr "ليس لديك صلاحية الوصول إلى الفوترة."
+
+#: lib/udin_billing/web/components.ex
+#, elixir-autogen, elixir-format
+msgid "missing"
+msgstr "ناقص"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "never expires"
+msgstr "بلا تاريخ انتهاء"
+
+#: lib/udin_billing/web/examples.ex
+#, elixir-autogen, elixir-format
+msgid "units"
+msgstr "وحدات"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgid "valid %{period}"
+msgstr "صالحة لمدة %{period}"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgctxt "one unit of time"
+msgid "day"
+msgstr "يوم"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgctxt "one unit of time"
+msgid "month"
+msgstr "شهر"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgctxt "one unit of time"
+msgid "week"
+msgstr "أسبوع"
+
+#: lib/udin_billing/web/text.ex
+#, elixir-autogen, elixir-format
+msgctxt "one unit of time"
+msgid "year"
+msgstr "سنة"

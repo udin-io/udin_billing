@@ -1,0 +1,598 @@
+## "msgid"s in this file come from POT (.pot) files.
+###
+### Do not add, change, or remove "msgid"s manually here as
+### they're tied to the ones in the corresponding POT file
+### (with the same domain).
+###
+### Use "mix gettext.extract --merge" or "mix gettext.merge"
+### to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "%{feature} amount"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "%{feature} limit"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "A short id: lowercase letters, numbers and dashes. It can't change later."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "A whole number. The lower the number, the earlier buyers see the plan."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Add a feature"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Adds a star to the plan so buyers notice it. It does not change the price or what is included."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "After a subscription ends"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Anything not turned on here is off for this plan. What it includes can't change once the plan has buyers."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Back to plans"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Billing period"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Changes apply to new buyers. People who already bought this plan keep what they paid for."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Code"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "Continue where they left off"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Copy the id exactly as it appears at the provider. A wrong id means purchases won't match this plan. Leave it empty if you don't sell this plan there."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Counter"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Counter reset"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Create new version"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Create plan"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Created %{new}. %{old} is off sale."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Currency"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Default plan (everyone has it without buying)"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Description"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Design one plan here: its name, price, how long it lasts and what it includes. The preview shows what buyers will see."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Display order"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "Each time a subscription ends, the user gets a new free allowance. A one-time allowance is given again, and a monthly one starts a new month that day. This is friendlier when users move between paid and free often."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Edit plan"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Every user gets this plan automatically. Only one free plan should be the default."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Fill it only during a sale. It shows crossed out next to the price. Buyers still pay the price. It must be higher than the price."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Fix the highlighted fields to save."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Fixed once created. Your app and payment providers refer to it."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: %{amount} %{feature}"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: %{id}"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: %{plan_code}"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: %{plan_name}"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: %{price} means buyers pay %{price} %{currency}."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: 1 month charges every month. 1 year charges once a year."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: 7 days or 1 month after paying."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: a plan with 1 shows before a plan with 2."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: a user used all %{amount} free %{feature}, subscribed, then cancelled. With the first choice they get no new free %{feature}. With the second they get %{amount} again."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: choose %{currency} if the price is %{price} %{currency}."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: choose a subscription to charge %{price} %{currency} again every month."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: choose never ends for a plan that is always free."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: price %{price} and original price %{original}."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: reset every 1 month, so each month buyers get %{amount} %{feature} again."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: the starter plan that new users have before they buy %{plan_name}."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "For example: turn off %{plan_name} when you stop offering it."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "Free plan"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Free plans cost nothing. A one-time plan is paid once. A subscription charges again every period. The type can't change once the plan has buyers."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "Free units they used before subscribing stay used. A one-time free allowance is never given again. A monthly one carries on with its current month. This stops people from collecting free units by subscribing and cancelling."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "Fresh start"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Highlight as recommended"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "How long a buyer can use it after paying. It can't change once the plan has buyers."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "How long it lasts"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "How many"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "How often the subscription renews and charges. Access lasts until the paid period ends. It can't change once the plan has buyers."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Its price, type, periods and what it includes are locked. To change them, create a new version. It starts as a copy, and saving it takes this plan off sale. Current buyers keep this plan until their paid period ends."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Lasts"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Limited"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Manage features"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Name"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Name and description"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Never ends"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Never resets (given once)"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "New plan"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "New version of %{code}"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "New version of %{code}."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "No features yet. Add switches and counters first."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Not included, a set number of units, or unlimited. Limited needs a whole number above 0."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Numbers only. Use a dot for decimals. It can't change once the plan has buyers."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "On sale"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "One short line that says who the plan is for. You can leave it empty."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "One-time plan"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Original price (optional)"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Payment provider products"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Plan type"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Preview"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Preview language"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Price"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Recommended"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Renews every"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Reset every"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Save changes"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Saved %{code}."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Saving applies right away to new buyers. Nothing is charged by saving."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Saving creates this plan and takes %{code} off sale. Its buyers keep it until their paid period ends. Give this version its own payment provider product ids."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Saving…"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Subscribers don't get the free plan on top of their plan. This decides what they get when they're back on free."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "Subscription plan"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Switch"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "That plan doesn't exist."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "The currency of the price. It can't change once the plan has buyers."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "The id each payment provider knows this plan by. Several ids: separate with commas."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "The price buyers pay. Where a payment provider sets its own price, keep it the same."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "The title of the plan on the buyer's screen."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "This is how buyers will see the plan. Switch the language to check each translation. It does not change the language of this page."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "This plan has buyers."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Turn it off to stop selling this plan. Buyers who already have it keep it."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Turn it on to give this feature to buyers of this plan."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Type"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Unit"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "Usually never ends. Counters refill on the reset below."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "What buyers see, in every language your app supports. Fill the same text in each language."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "What's included"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "When counters (%{names}) refill. A yearly plan can reset monthly. Unused units don't carry over. The refill can't be longer than the billing period."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "When counters refill. A yearly plan can reset monthly. Unused units don't carry over. The refill can't be longer than the billing period."
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "a number like 150 or 99.50"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "a number like 200"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "choose a currency"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "choose a type"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "day(s)"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "enter a number of days, weeks, months or years"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "enter a whole number above 0"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "fill every language or leave all empty"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "month(s)"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#: lib/udin_billing/web/plan_form_live.ex
+#, elixir-autogen, elixir-format
+msgid "required"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "week(s)"
+msgstr ""
+
+#: lib/udin_billing/web/plan_form.ex
+#, elixir-autogen, elixir-format
+msgid "year(s)"
+msgstr ""
